@@ -1,0 +1,14 @@
+// ------------------------------------------------------------
+// Override Neat's grid settings
+// ------------------------------------------------------------
+
+$column: golden-ratio(1em, 3) !default; // Column width
+$gutter: golden-ratio(1em, 2) !default; // Gutter between each two columns
+
+// ------------------------------------------------------------
+// Set Bourbon's flex-grid variables to match what Neat is doing
+// http://bourbon.io/docs/#flex-grid
+// ------------------------------------------------------------
+
+$fg-column: $column;
+$fg-gutter: $gutter;

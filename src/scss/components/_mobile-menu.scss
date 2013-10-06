@@ -1,0 +1,76 @@
+// Mobile nav breakpoint
+$mobile-nav-breakpoint: 35em;
+
+// ------------------------------------------------------------
+// Site Nav
+// ------------------------------------------------------------
+.site-nav {
+  .nav-links {
+    height: 0;
+    overflow: hidden;
+    @include media($mobile-nav-breakpoint) {
+      height: auto;
+      overflow: auto;
+    }
+    .nav-left,
+    .nav-right {
+      @include clearfix;
+    }
+    .nav-left {
+      @include media($mobile-nav-breakpoint) {
+        float: left;
+      }
+      a {
+        margin-right: $unit;
+      }
+    }
+    .nav-right {
+      @include media($mobile-nav-breakpoint) {
+        float: right;
+      }
+    }
+  }
+}
+
+// ------------------------------------------------------------
+// Mobile Menu
+// ------------------------------------------------------------
+
+.mobile-menu {
+  @include button-reset;
+  position: absolute;
+  top: $unit;
+  right: $unit;
+  z-index: 2;
+  text-align: center;
+  color: $primary;
+  @include media($mobile-nav-breakpoint) {
+    display: none;
+  }
+  .icon {
+    display: block;
+    font-size: 2em;
+    line-height: 0;
+    padding: $unit $unit/2;
+    color: inherit;
+    cursor: pointer;
+  }
+}
+
+// SG Menu active
+.menu-active {
+  .mobile-menu {
+    color: $tertiary;
+  }
+  .nav-links {
+    height: auto;
+    overflow: auto;
+    padding-bottom: $unit;
+
+    a {
+      display: block;
+      margin: $unit/2;
+      text-align: center;
+    }
+  }
+}

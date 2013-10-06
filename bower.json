@@ -1,0 +1,11 @@
+{
+  "name": "boilerplate",
+  "description": "Front-end tool for generating static sites with Grunt, Bower, Assemble, Sass, Bourbon, Bourbon Neat.",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "1.10.2",
+    "mfglabs-iconset": "https://github.com/MfgLabs/mfglabs-iconset.git",
+    "bourbon": "https://github.com/thoughtbot/bourbon.git#3.1.8",
+    "neat": "https://github.com/thoughtbot/neat.git#1.4.0"
+  }
+}

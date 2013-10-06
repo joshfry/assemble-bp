@@ -1,0 +1,32 @@
+---
+layout: base.hbs
+---
+
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  {{> head }}
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <nav class="site-nav" role="navigation">
+        {{> nav }}
+      </nav>
+      {{> header }}
+    </div>
+  </header>
+  <main class="site-main" role="main">
+    <div class="container">
+      {{> body }}
+    </div>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      {{> footer }}
+    </div>
+  </footer>
+  {{> scripts }}
+  {{> dev }}
+</body>
+</html>

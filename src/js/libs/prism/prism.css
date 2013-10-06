@@ -1,0 +1,100 @@
+/**
+ * prism.js Funky theme
+ * Based on “Polyfilling the gaps” talk slides http://lea.verou.me/polyfilling-the-gaps/
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: "courier-prime", monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  font-size: .9em;
+  padding: .675em 1em;
+  margin: .5em 0 1em;
+  overflow: auto;
+  background: #071022;
+  border-radius: 3px;
+}
+
+code[class*="language-"] {
+  background: #071022;
+  color: white;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .2em;
+  border-radius: .3em;
+  box-shadow: none;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #aaa;
+}
+
+.token.punctuation {
+  color: #999;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number {
+  color: #0cf;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string {
+  color: yellow;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string {
+  color: yellowgreen;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: deeppink;
+}
+
+
+.token.regex,
+.token.important {
+  color: orange;
+}
+
+.token.important {
+  font-weight: bold;
+}
+
+.token.entity {
+  cursor: help;
+}

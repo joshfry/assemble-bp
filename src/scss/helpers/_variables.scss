@@ -1,0 +1,101 @@
+// ------------------------------------------------------------
+// Variables
+// ------------------------------------------------------------
+
+// Base
+// ------------------------------------------------------------
+
+$font-weight: 400;
+$font-size: 1em;
+$line-height: 1.6;
+$font-family: "proxima-nova", sans-serif;
+
+
+// Colors
+// ------------------------------------------------------------
+
+$primary : #2379cf;
+  $primary-light: lighten($primary,25%);
+    $primary-light-accent: lighten($primary,30%);
+  $primary-lighter: lighten($primary,45%);
+    $primary-lighter-accent: lighten($primary,35%);
+  $primary-dark: darken($primary,15%);
+  $primary-darker: darken($primary,30%);
+$secondary : #001275;
+$tertiary : #e25a00;
+  $tertiary-dark: darken($tertiary,15%);
+  $tertiary-darker: darken($tertiary,30%);
+
+// Grayscale
+$light-black : #444;
+$black : #000;
+$light-gray : #ddd;
+$gray : #ccc;
+$dark-gray : #999;
+$white-smoke : #eee;
+$white : #fff;
+
+// Links
+$link-color  : $primary;
+$link-hover-color : $tertiary;
+
+// Selection
+$selection-color : #FF69B4;
+
+
+// Layout
+// ------------------------------------------------------------
+
+$unit : $font-size;
+
+// Containers
+$container                 : 75em; // 1200px
+$container-narrow          : 60em; // 960px
+$container-super-narrow    : 45em; // 720px
+$container-mobile          : 30em; // 480px
+
+
+// Type sizes
+// ------------------------------------------------------------
+
+$fs12: $unit*.75;
+$fs14: $unit*.85;
+
+$fs16: $unit;
+
+$fs18: $unit*1.125;
+$fs20: $unit*1.25;
+$fs22: $unit*1.375;
+
+$fs24: $unit*1.5;
+$fs26: $unit*1.625;
+$fs28: $unit*1.75;
+$fs30: $unit*1.875;
+
+$fs32: $unit*2;
+$fs34: $unit*2.125;
+$fs36: $unit*2.25;
+$fs38: $unit*2.375;
+
+$fs40: $unit*2.5;
+$fs42: $unit*2.625;
+$fs44: $unit*2.75;
+$fs46: $unit*2.875;
+
+$fs48: $unit*3;
+$fs50: $unit*3.125;
+$fs52: $unit*3.25;
+$fs54: $unit*3.375;
+
+$fs56: $unit*3.5;
+$fs58: $unit*3.625;
+$fs60: $unit*3.75;
+$fs62: $unit*3.875;
+
+$fs64: $unit*4;
+
+
+// Dev Mode
+// ------------------------------------------------------------
+
+$dev-mode : true;

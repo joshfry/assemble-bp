@@ -1,0 +1,14 @@
+{
+  "custom_data_single" : {
+    "custom" : "data"
+  },
+
+  "custom_data_array" : [
+    {
+      "custom" : "data"
+    },
+    {
+      "custom" : "data"
+    }
+  ]
+}

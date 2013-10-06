@@ -1,0 +1,37 @@
+// Code
+// ------------------------------------------------------------
+
+// inline
+p,li {
+  code {
+    border: 1px solid $gray;
+    padding: 0 .5em;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: .25em;
+    font-size: .75em;
+    line-height: 1.5;
+    max-width: 100%;
+    overflow: scroll;
+  }
+}
+
+// Code blocks
+pre {
+  margin: $unit/2 0 $unit;
+  //
+  // !! for code blocks without a class !!
+  //
+  font-size: .9em;
+  padding: .5em 1em;
+  border: 1px solid $gray;
+  border-radius: 3px;
+}
+pre[class*=language-] {
+  margin: $unit/2 0 $unit;
+  //
+  // !! for code blocks with a class !!
+  //
+  border: none;
+  border-radius: none;
+}

@@ -1,0 +1,19 @@
+# Server
+port: 8000
+
+# Bower directory
+bower: dist/assets/bower
+
+# Site build variables
+dev: dist
+prod: build
+assets: assets
+assemble: src/templates
+
+# Site info
+name: Boilerplate
+
+# Copyright info
+copyright: Boilerplate
+display_badge: true
+badge: Made by <i class="icon-high_voltage"></i> <a href="https://twitter.com/joshfry" target="_blank">@joshfry</a>

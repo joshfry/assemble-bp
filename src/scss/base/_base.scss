@@ -1,0 +1,59 @@
+// ------------------------------------------------------------
+// Base resets
+// ------------------------------------------------------------
+
+// Box sizing is handeled with Bourbon
+// * {
+//   -webkit-box-sizing: border-box;
+//   -moz-box-sizing: border-box;
+//   box-sizing: border-box;
+// }
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: $font-family;
+  background: $white;
+  color: $light-black;
+}
+
+::selection {
+  background: $selection-color;
+  text-shadow: none;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  outline: 0;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+  // Make images display block and
+  // remove the annoying space underneath.
+  .img {
+    display: block;
+  }
+
+// ul's inside nav's
+// ------------------------------------------------------------
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
