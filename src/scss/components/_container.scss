@@ -3,28 +3,33 @@
 .container {
   @include outer-container;
   max-width: $container;
-  padding-left: $unit;
-  padding-right: $unit;
-  @include media(480px)  {
-    padding-left: $unit*1.5;
-    padding-right: $unit*1.5;
-  }
+  padding-left: $unit*1.5;
+  padding-right: $unit*1.5;
   @include media($container+$unit*3) {
     padding-left: 0;
     padding-right: 0;
   }
 }
-.container--narrow {
+.container--narrow,
+.container--n {
   @extend .container;
   max-width: $container-narrow;
 }
-.container--super-narrow {
+.container--super-narrow,
+.container--s {
   @extend .container;
   max-width: $container-super-narrow;
 }
-.container--mobile {
+.container--mobile,
+.container--m {
   @extend .container;
   max-width: $container-mobile;
+}
+
+.container--readable,
+.container--r {
+  @extend .container;
+  max-width: $container-readable;
 }
 
 // Full Bleed

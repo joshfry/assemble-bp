@@ -2,29 +2,12 @@
 // Variables
 // ------------------------------------------------------------
 
-// Base
-// ------------------------------------------------------------
-
-$font-weight: 400;
-$font-size: 1em;
-$line-height: 1.6;
-$font-family: "proxima-nova", sans-serif;
-
-
 // Colors
 // ------------------------------------------------------------
 
 $primary : #2379cf;
-  $primary-light: lighten($primary,25%);
-    $primary-light-accent: lighten($primary,30%);
-  $primary-lighter: lighten($primary,45%);
-    $primary-lighter-accent: lighten($primary,35%);
-  $primary-dark: darken($primary,15%);
-  $primary-darker: darken($primary,30%);
 $secondary : #001275;
 $tertiary : #e25a00;
-  $tertiary-dark: darken($tertiary,15%);
-  $tertiary-darker: darken($tertiary,30%);
 
 // Grayscale
 $light-black : #444;
@@ -36,22 +19,32 @@ $white-smoke : #eee;
 $white : #fff;
 
 // Links
-$link-color  : $primary;
+$link-color : $primary;
 $link-hover-color : $tertiary;
 
 // Selection
 $selection-color : #FF69B4;
 
 
-// Layout
+// Baseline
 // ------------------------------------------------------------
+
+$font-weight: 400;
+$font-size: 1em;
+$line-height: 1.6;
+$font-family: "proxima-nova", sans-serif;
+
+// Unit
 
 $unit : $font-size;
 
 // Containers
+// ------------------------------------------------------------
+
 $container                 : 75em; // 1200px
 $container-narrow          : 60em; // 960px
 $container-super-narrow    : 45em; // 720px
+$container-readable        : 37.5em; // 600px
 $container-mobile          : 30em; // 480px
 
 
