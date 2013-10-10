@@ -76,34 +76,40 @@ Install new git packages
 
 ## Requirements
 
-- [Ruby](https://www.ruby-lang.org/en)
-  - [Bundler](http://bundler.io) `$ gem install bundler`
-  - [Rake](http://rake.rubyforge.org) `$ gem install rake`
+- [Ruby](https://www.ruby-lang.org/en) - Install with [rbenv](https://github.com/sstephenson/rbenv)
+  - [Rake](http://rake.rubyforge.org) `gem install rake`
 - [Node](http://nodejs.org)
-  - [Grunt](http://gruntjs.com) `npm install -g grunt-cli`
-  - [Bower](http://bower.io) `npm install -g bower`
 
-## Installation
+## Setup
 
-    $ rake
+    $ rake setup
+
+- Installs Grunt CLI
+- Installs Bower CLI
     
-Rake does the following:
+## Install
 
-- `$ bundle install --path=vendor` Installs Ruby Gems
-- `$ npm install` Installs npm modules
-- `$ bower install` Installs Bower packages
+    $ rake install
 
-## Grunt tasks
+- Installs Ruby Gems to `/vendor/ruby`
+- Installs Bower packages to `/vendor/bower`
+- Installs npm modules to `/node_modules`
 
-Development
+## Grunt commands
+
+### Development
 
     $ grunt dev
 
-Production
+- Creates web server at [http://localhost:8000](http://localhost:8000)
+- Livereloads browser on save
+- Static site generator via [assemble](http://assemble.io)
+
+### Production
 
     $ grunt build
 
-To view the build:
+To view production build:
 
     $ grunt p
 
