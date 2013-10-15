@@ -1,32 +1,47 @@
 // Mobile nav breakpoint
-$mobile-nav-breakpoint: 35em;
+$mobile-nav-breakpoint: 30em;
 
 // ------------------------------------------------------------
 // Site Nav
 // ------------------------------------------------------------
+
 .site-nav {
+  @include clearfix;
+  padding: $unit 0;
+  .navbar-brand {
+    display: block;
+    @include media($mobile-nav-breakpoint) {
+      margin-right: $unit;
+      float: left;
+    }
+  }
+  .site-logo {
+    display: block;
+    border-radius: 100%;
+    margin: auto;
+  }
   .nav-links {
     height: 0;
     overflow: hidden;
+
     @include media($mobile-nav-breakpoint) {
       height: auto;
       overflow: auto;
     }
-    .nav-left,
-    .nav-right {
-      @include clearfix;
-    }
-    .nav-left {
+
+    a {
       @include media($mobile-nav-breakpoint) {
+        display: block;
         float: left;
-      }
-      a {
-        margin-right: $unit;
+        line-height: 0;
+        height: 0;
+        padding: 50px $unit;
       }
     }
     .nav-right {
       @include media($mobile-nav-breakpoint) {
         float: right;
+        padding-right: 0;
       }
     }
   }
@@ -39,7 +54,7 @@ $mobile-nav-breakpoint: 35em;
 .mobile-menu {
   @include button-reset;
   position: absolute;
-  top: $unit;
+  top: $unit*2;
   right: $unit;
   z-index: 2;
   text-align: center;
@@ -65,11 +80,11 @@ $mobile-nav-breakpoint: 35em;
   .nav-links {
     height: auto;
     overflow: auto;
-    padding-bottom: $unit;
+    padding: $unit/2 0;
 
     a {
       display: block;
-      margin: $unit/2;
+      padding: $unit/2;
       text-align: center;
     }
   }

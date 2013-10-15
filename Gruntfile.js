@@ -90,11 +90,15 @@ module.exports = function(grunt) {
       options: {
         flatten: true,
         data: '<%= site.assemble %>/data/**/*.{json,yml}',
-        assets: '<%= site.dev %>/<%= site.assets %>',
+        assets: '<%= site.assets %>',
         helpers: '<%= site.assemble %>/helpers/*.js',
         layoutdir: '<%= site.assemble %>/layouts',
         layout: 'default.hbs',
-        partials: ['<%= site.assemble %>/pages/**/*.hbs','<%= site.assemble %>/partials/**/*.hbs']
+        partials: ['<%= site.assemble %>/pages/**/*.hbs','<%= site.assemble %>/partials/**/*.hbs'],
+        plugins: ['permalinks'],
+        permalinks: {
+          structure: ':basename/index.html'
+        }
       },
       pages: {
         files: [
