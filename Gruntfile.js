@@ -90,7 +90,7 @@ module.exports = function(grunt) {
       options: {
         flatten: true,
         data: '<%= site.assemble %>/data/**/*.{json,yml}',
-        assets: '<%= site.assets %>',
+        assets: '<%= site.dev %>/<%= site.assets %>',
         helpers: '<%= site.assemble %>/helpers/*.js',
         layoutdir: '<%= site.assemble %>/layouts',
         layout: 'default.hbs',

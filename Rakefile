@@ -35,7 +35,7 @@ end
 
 task :clean do
 
-  puts  consoleHeading('Cleaning out dev dependancies')
+  puts  consoleHeading('Cleaning out dev dependencies')
   sh    'rm -rf dist'
   sh    'rm -rf build'
   sh    'rm -rf vendor'
