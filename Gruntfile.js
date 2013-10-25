@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 
     watch: {
       html: {
-        files: ['**/**.{hbs,md}'],
+        files: ['src/**/**.{hbs,md}'],
         tasks: ['html']
       },
       scss: {
@@ -149,7 +149,7 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'src/img',
-            src: ['**/*.{png,jpg,gif}'],
+            src: ['**/*.{png,jpg,gif,svg}'],
             dest: '<%= site.dev %>/<%= site.assets %>/img'
           }
         ]
