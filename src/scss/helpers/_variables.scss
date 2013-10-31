@@ -1,94 +1,49 @@
+// Dev options
 // ------------------------------------------------------------
-// Variables
-// ------------------------------------------------------------
+
+$show_media_queries : true;
+$show_baseline_grid : true;
 
 // Colors
 // ------------------------------------------------------------
 
-$primary : #2379cf;
-$secondary : #001275;
-$tertiary : #e25a00;
+$primary: #2379cf;
+$secondary: #001275;
+$tertiary: #e25a00;
 
 // Grayscale
-$light-black : #444;
-$black : #000;
-$light-gray : #ddd;
-$gray : #ccc;
-$dark-gray : #999;
-$white-smoke : #eee;
-$white : #fff;
+
+$light-black: #444;
+$black: #000;
+$light-gray: #ddd;
+$gray: #ccc;
+$dark-gray: #999;
+$white-smoke: #eee;
+$white: #fff;
 
 // Links
-$link-color : $primary;
-$link-hover-color : $tertiary;
+
+$link-color: $primary;
+$link-hover-color: $tertiary;
 
 // Selection
-$selection-color : #FF69B4;
 
+$selection-color: #FF69B4;
 
 // Baseline
 // ------------------------------------------------------------
 
-$font-weight: 400;
 $font-size: 1em;
 $line-height: 1.6;
+$font-weight: 400;
 $font-family: "proxima-nova", sans-serif;
 
 // Unit
+// ------------------------------------------------------------
 
-$unit : $font-size;
+$unit: $font-size;
 
 // Containers
 // ------------------------------------------------------------
 
-$container                 : 75em; // 1200px
-$container-narrow          : 60em; // 960px
-$container-super-narrow    : 45em; // 720px
-$container-readable        : 37.5em; // 600px
-$container-mobile          : 30em; // 480px
-
-
-// Type sizes
-// ------------------------------------------------------------
-
-$fs12: $unit*.75;
-$fs14: $unit*.85;
-
-$fs16: $unit;
-
-$fs18: $unit*1.125;
-$fs20: $unit*1.25;
-$fs22: $unit*1.375;
-
-$fs24: $unit*1.5;
-$fs26: $unit*1.625;
-$fs28: $unit*1.75;
-$fs30: $unit*1.875;
-
-$fs32: $unit*2;
-$fs34: $unit*2.125;
-$fs36: $unit*2.25;
-$fs38: $unit*2.375;
-
-$fs40: $unit*2.5;
-$fs42: $unit*2.625;
-$fs44: $unit*2.75;
-$fs46: $unit*2.875;
-
-$fs48: $unit*3;
-$fs50: $unit*3.125;
-$fs52: $unit*3.25;
-$fs54: $unit*3.375;
-
-$fs56: $unit*3.5;
-$fs58: $unit*3.625;
-$fs60: $unit*3.75;
-$fs62: $unit*3.875;
-
-$fs64: $unit*4;
-
-
-// Dev Mode
-// ------------------------------------------------------------
-
-$dev-mode : true;
+$container: $max-width;

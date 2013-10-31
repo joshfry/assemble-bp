@@ -1,12 +1,4 @@
 // ------------------------------------------------------------
-// EXPERIMENTAL: Rem comversion
-// ------------------------------------------------------------
-
-@function rem($target,$context){
-  @return $target/$context + em;
-}
-
-// ------------------------------------------------------------
 // Remove iOS button defaults
 // ------------------------------------------------------------
 
@@ -17,36 +9,48 @@
 }
 
 // ------------------------------------------------------------
-// Components: Global attributes
-// ------------------------------------------------------------
-
-$component-spacing: $unit*1.5;
-
-@mixin component {
-  margin-top: $component-spacing;
-  margin-bottom: $component-spacing;
-}
-
-// ------------------------------------------------------------
 // Omega Reset for Bourbon Neat
+// http://joshfry.me/notes/omega-reset-for-bourbon-neat
 // ------------------------------------------------------------
-//
-// Allows you to reset omega() styles on new media queries
-// when you need to change the number of columns
-//
-// Useage:
-//
-// @include media(480px)  {
-//  @include span-columns(6);
-//  @include omega(2n);
-// }
-// @include media(720px)  {
-//  @include omega-reset(2n);
-//  @include span-columns(4);
-//  @include omega(3n);
-// }
 
 @mixin omega-reset($nth) {
   &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
   &:nth-child(#{$nth}+1) { clear: none }
+}
+
+// ------------------------------------------------------------
+// Full Bleed
+// Let the container span edge-to-edge.
+// ------------------------------------------------------------
+
+@mixin full-bleed {
+  padding-left: 0;
+  padding-right: 0;
+}
+// Apply .full-bleed to a section: targets direct .container child
+.full-bleed {
+  > .container {
+    @include full-bleed;
+  }
+}
+// ... or apply it directly to a container
+.container {
+  &.full-bleed {
+    @include full-bleed;
+  }
+}
+
+// ------------------------------------------------------------
+// Module
+// Removes top margin from first child element
+// and bottom margin from last child element
+// ------------------------------------------------------------
+
+@mixin module {
+  *:first-child { margin-top: 0 }
+  *:last-child { margin-bottom: 0 }
+}
+// Enable .module class
+.module {
+  @include module;
 }

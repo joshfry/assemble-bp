@@ -1,6 +1,6 @@
 // ------------------------------------------------------------
 // Mobile Menu
-   console.log('Component: Mobile Menu');
+   console.log('%c✔ Mobile Menu', 'color: #27ae60');
 // ------------------------------------------------------------
 
 var $MenuTrigger = $('.mobile-menu');

@@ -1,102 +1,13 @@
+// ------------------------------------------------------------
 // Container
 // ------------------------------------------------------------
+
 .container {
   @include outer-container;
-  max-width: $container;
   padding-left: $unit*1.5;
   padding-right: $unit*1.5;
   @include media($container+$unit*3) {
     padding-left: 0;
     padding-right: 0;
   }
-}
-.container--narrow,
-.container--n {
-  @extend .container;
-  max-width: $container-narrow;
-}
-.container--super-narrow,
-.container--s {
-  @extend .container;
-  max-width: $container-super-narrow;
-}
-.container--mobile,
-.container--m {
-  @extend .container;
-  max-width: $container-mobile;
-}
-
-.container--readable,
-.container--r {
-  @extend .container;
-  max-width: $container-readable;
-}
-
-// Full Bleed
-// Let the container span edge-to-edge.
-// Perfect for hero images or videos.
-// ------------------------------------------------------------
-%full-bleed {
-  padding-left: 0;
-  padding-right: 0;
-}
-// .featured {
-//  .container {
-//    @extend %full-bleed;
-//  }
-// }
-//
-// Use .full-bleed as a class in HTML
-//
-// Apply .full-bleed to a section
-// .full-bleed is meant for the section container
-// so target the section's .continer only if
-// it's a direct child
-.full-bleed {
-  > .container {
-    @extend %full-bleed;
-  }
-}
-// ... or apply it directly to a container
-.container {
-  &.full-bleed {
-    @extend %full-bleed;
-  }
-}
-
-// ------------------------------------------------------------
-// Modules
-// ------------------------------------------------------------
-//
-// Removes top margin from first child element and
-// bottom margin from last child element
-
-@mixin module {
-  *:first-child { margin-top: 0 }
-  *:last-child { margin-bottom: 0 }
-}
-
-// Enable .module class
-.module {
-  @include module;
-}
-
-// ------------------------------------------------------------
-// Padded
-// ------------------------------------------------------------
-//
-// Add vertical padding to sections
-
-@mixin padded {
-  padding-top: 7.5%;
-  padding-bottom: 7.5%;
-  @include media(480px) {
-    padding-top: $unit*4;
-    padding-bottom: $unit*4;
-  }
-}
-
-// Enable .padded class
-.padded {
-  @include padded;
 }

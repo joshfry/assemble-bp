@@ -9,20 +9,23 @@ layout: base.hbs
 </head>
 <body>
   <header class="site-header" role="banner">
-    <div class="container--r">
+    <div class="container">
       <nav class="site-nav" role="navigation">
         {{> nav }}
       </nav>
-      {{!-- {{> header }} --}}
+      {{> header }}
     </div>
   </header>
   <main class="site-main" role="main">
-    <div class="container--r">
-      {{> body }}
+    <div class="container">
+      <div class="page">
+        {{> page-header }}
+        {{> body }}
+      </div>
     </div>
   </main>
   <footer class="site-footer" role="contentinfo">
-    <div class="container--r">
+    <div class="container">
       {{> footer }}
     </div>
   </footer>
