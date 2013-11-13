@@ -7,12 +7,12 @@ $show_baseline_grid : false;
 // Typography
 // ------------------------------------------------------------
 
-$sans-serif: "proxima-nova", sans-serif;
-$serif: $georgia;
-
 $base-font-size: 1em;
 $base-line-height: $base-font-size * 1.6;
 $base-font-weight: 400;
+
+$sans-serif: "proxima-nova", sans-serif;
+$serif: $georgia;
 
 $base-font-family: $sans-serif;
 $header-font-family: $base-font-family;
@@ -24,6 +24,7 @@ $unit: $base-font-size;
 $base-border-radius: em(4);
 
 $container: $max-width;
+
 
 // Colors
 // ------------------------------------------------------------
@@ -65,5 +66,4 @@ $notice-color: $light-yellow;
 $success-color: $light-green;
 
 // Selection
-
 $selection-color: #FF69B4;

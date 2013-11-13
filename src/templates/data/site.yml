@@ -13,6 +13,9 @@ assemble: src/templates
 # Site info
 name: Boilerplate
 
+# Typekit info
+typekitID: dnr3nex
+
 # Copyright info
 copyright: Boilerplate
 display_badge: true
