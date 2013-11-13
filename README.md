@@ -112,22 +112,28 @@ Install new packages
 
 ### Sass: Boilerplate code
 
-    /src/scss/
-    ├── _author.scss
+I incorporated [http://bitters.bourbon.io](http://bitters.bourbon.io/)
+
     ├── base
     │   ├── _base.scss
+    │   ├── _flashes.scss
+    │   ├── _forms.scss
+    │   ├── _lists.scss
     │   ├── _normalize.scss
-    │   └── _reset.scss
+    │   ├── _tables.scss
+    │   └── _typography.scss
     ├── components
     │   ├── _code.scss
-    │   ├── _container.scss
-    │   ├── _footer.scss
-    │   └── _site-nav.scss
+    │   └── _container.scss
     ├── helpers
     │   ├── _dev.scss
     │   ├── _grid-settings.scss
     │   ├── _mixins.scss
     │   └── _variables.scss
+    ├── site
+    │   ├── _author.scss
+    │   ├── _footer.scss
+    │   └── _site-nav.scss
     └── style.scss
 
 > Check out `scss/helpers/_variables.scss` for design helpers:
