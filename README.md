@@ -1,7 +1,8 @@
 # Boilerplate
 
-*Front-end tool for generating static sites with Grunt, Bower, Assemble, Sass, Bourbon, Bourbon Neat.*
-> This is my personal starting point for new projects and is meant to be customized.
+A front-end tool for generating static sites with [Grunt](http://gruntjs.com/), [Assemble](http://assemble.io/), [Bower](http://bower.io/), [Sass](http://sass-lang.com/), [Bourbon](http://bourbon.io/), [Bourbon Neat](http://neat.bourbon.io/) and Bourbon [Bitters](http://bitters.bourbon.io/).
+
+> This is my personal starting point for new projects... totally meant to be customized.
 
 #### Requirements
 

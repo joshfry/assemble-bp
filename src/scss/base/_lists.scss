@@ -1,0 +1,45 @@
+// ul, ol {
+//   margin: 0;
+//   padding: 0;
+//   list-style-type: none;
+
+//   &%default-ul {
+//     list-style-type: disc;
+//     margin-bottom: $base-line-height / 2;
+//     padding-left: $base-line-height;
+//   }
+
+//   &%default-ol {
+//     list-style-type: decimal;
+//     margin-bottom: $base-line-height / 2;
+//     padding-left: $base-line-height;
+//   }
+// }
+
+// ------------------------------------------------------------
+// I prefer my method of removing list styles
+// only if nested within <nav>
+
+nav {
+  ul {
+    margin: 0 0 ($base-line-height * .5);
+    padding: 0;
+    list-style: none;
+  }
+}
+
+// ------------------------------------------------------------
+
+dl {
+  line-height: $base-line-height;
+  margin-bottom: $base-line-height / 2;
+
+  dt {
+    font-weight: bold;
+    margin-top: $base-line-height / 2;
+  }
+
+  dd {
+    margin: 0;
+  }
+}

@@ -1,45 +1,136 @@
 ---
 title: test
-pageTitle: Test page for assemble permalinks
+pageTitle: Test page
 ---
 
 {{#markdown}}
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+> This page is written in Markdown
 
-http://assemble.io
+- If assemble permalinks are working, this URL should be http://localhost:8000/test
+- Learn more about assemble at http://assemble.io
 
-### Code samples
+---
 
+## Code Blocks
+
+`scss`
 ```scss
 body {
   background: red;
 }
 ```
-
+`markup`
 ```markup
 <link rel="stylesheet" href="css/style.css" />
 ```
-
+`javascript`
 ```javascript
 console.log('hi');
 ```
-
+`bash`
 ```bash
 # Start your engines
 $ grunt dev
 ```
 
-## Section 1
+---
+
+## Paragraphs
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-## Section 2
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-## Section 3
+---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+# Headings
+
+# Heading Level 1
+## Heading Level 2
+### Heading Level 3
+#### Heading Level 4
+##### Heading Level 5
+###### Heading Level 6
+
+---
+
+# Form Elements
+
+A nice resource for all HTML5 input types http://nativeformelements.com
 
 {{/markdown}}
+
+<form>
+  <fieldset>
+    <legend>Form</legend>
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Name">
+    <label for="email">Email</label>
+    <input type="text" id="email" placeholder="Email">
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="password">
+    <label for="comments">Comments</label>
+    <textarea id="comments" placeholder="comments"></textarea>
+    <select>
+      <optgroup label="Option group 1">
+        <option>Option 1</option>
+        <option>Option 2</option>
+      </optgroup>
+      <optgroup label="Option group 2">
+        <option>Option 3</option>
+      </optgroup>
+    </select>
+  </fieldset>
+
+  <input type="submit">
+</form>
+
+<hr>
+
+<strong>The following is taken from <a href="http://bitters.bourbon.io/example.html" target="_blank">http://bitters.bourbon.io/example.html</a></strong>
+
+<h1 id="tables">Tables</h1>
+
+  <table cellspacing="0" cellpadding="0">
+    <tr>
+      <th>Table Header 1</th><th>Table Header 2</th><th>Table Header 3</th>
+    </tr>
+    <tr>
+      <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+    </tr>
+    <tr class="even">
+      <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+    </tr>
+    <tr>
+      <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+    </tr>
+  </table>
+
+  <hr />
+
+  <h1 id="misc">Misc Stuff - abbr, acronym, pre, code, sub, sup, etc.</h1>
+
+  <p>Lorem <sup>superscript</sup> dolor <sub>subscript</sub> amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <cite>cite</cite>. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p>
+
+  <pre><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p></pre>
+
+  <blockquote>
+    <p> This stylesheet is going to help so freaking much.</p>
+    <cite>Blockquote</cite>
+  </blockquote>
+
+  <hr />
+
+  <h1 id="flashes">Flash / error messages</h1>
+  <div class="success">
+    <span>This is a success message <a href="#">with a link</a></span>
+  </div>
+  <div class="error">
+    <span>This is an error message <a href="#">with a link</a></span>
+  </div>
+  <div class="notice">
+    <span>This is an notice message <a href="#">with a link</a></span>
+  </div>

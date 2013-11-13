@@ -4,6 +4,7 @@
 // inline
 p,li {
   code {
+    -webkit-font-smoothing: subpixel-antialiased;
     border: 1px solid $gray;
     padding: 0 .5em;
     display: inline-block;
@@ -11,14 +12,15 @@ p,li {
     border-radius: .25em;
     font-size: .75em;
     line-height: 1.5;
-    max-width: 100%;
-    overflow: scroll;
+    // max-width: 100%;
+    // overflow: scroll;
   }
 }
 
 // Code blocks
 pre {
-  margin: $unit/2 0 $unit;
+  -webkit-font-smoothing: subpixel-antialiased;
+  margin: $unit 0;
   //
   // !! for code blocks without a class !!
   //
@@ -28,7 +30,8 @@ pre {
   border-radius: 3px;
 }
 pre[class*=language-] {
-  margin: $unit/2 0 $unit;
+  -webkit-font-smoothing: subpixel-antialiased;
+  margin: $unit 0;
   //
   // !! for code blocks with a class !!
   //

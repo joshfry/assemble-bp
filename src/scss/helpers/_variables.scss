@@ -2,7 +2,28 @@
 // ------------------------------------------------------------
 
 $show_media_queries : true;
-$show_baseline_grid : true;
+$show_baseline_grid : false;
+
+// Typography
+// ------------------------------------------------------------
+
+$sans-serif: "proxima-nova", sans-serif;
+$serif: $georgia;
+
+$base-font-size: 1em;
+$base-line-height: $base-font-size * 1.6;
+$base-font-weight: 400;
+
+$base-font-family: $sans-serif;
+$header-font-family: $base-font-family;
+
+// Sizes
+// ------------------------------------------------------------
+
+$unit: $base-font-size;
+$base-border-radius: em(4);
+
+$container: $max-width;
 
 // Colors
 // ------------------------------------------------------------
@@ -11,39 +32,38 @@ $primary: #2379cf;
 $secondary: #001275;
 $tertiary: #e25a00;
 
-// Grayscale
-
-$light-black: #444;
 $black: #000;
+$light-black: #444;
 $light-gray: #ddd;
 $gray: #ccc;
 $dark-gray: #999;
 $white-smoke: #eee;
 $white: #fff;
 
-// Links
+// $blue: #477DCA;
+// $dark-gray: #333;
+// $medium-gray: #999;
+// $light-gray: #DDD;
+$light-red: #FBE3E4;
+$light-yellow: #FFF6BF;
+$light-green: #E6EFC2;
 
-$link-color: $primary;
-$link-hover-color: $tertiary;
+//  Font Colors
+$base-font-color: $light-black;
+$base-accent-color: $primary;
+
+//  Text Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: $tertiary;
+
+// Border color
+$base-border-color: $light-gray;
+
+// Flash Colors
+$error-color: $light-red;
+$notice-color: $light-yellow;
+$success-color: $light-green;
 
 // Selection
 
 $selection-color: #FF69B4;
-
-// Baseline
-// ------------------------------------------------------------
-
-$font-size: 1em;
-$line-height: 1.6;
-$font-weight: 400;
-$font-family: "proxima-nova", sans-serif;
-
-// Unit
-// ------------------------------------------------------------
-
-$unit: $font-size;
-
-// Containers
-// ------------------------------------------------------------
-
-$container: $max-width;

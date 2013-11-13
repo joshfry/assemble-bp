@@ -14,12 +14,13 @@ html {
 }
 
 body {
-  font-weight: $font-weight;
-  font-size: $font-size;
-  line-height: $line-height;
-  font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: $base-font-weight;
+  font-family: $base-font-family;
   background: $white;
-  color: $light-black;
+  color: $base-font-color;
 }
 
 ::selection {
@@ -28,32 +29,28 @@ body {
 }
 
 a {
-  color: $link-color;
+  color: $base-link-color;
   text-decoration: none;
   outline: 0;
+  @include transition(color 0.1s linear);
 
   &:hover {
-    color: $link-hover-color;
+    color: $hover-link-color;
+  }
+  &:active, &:focus {
+    color: $hover-link-color;
+    outline: none;
   }
 }
 
 img {
+  margin: 0;
   max-width: 100%;
   height: auto;
-}
+
   // Make images display block and
   // remove the annoying space underneath.
-  .img {
+  &.img {
     display: block;
-  }
-
-// ul's inside nav's
-// ------------------------------------------------------------
-
-nav {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
   }
 }
