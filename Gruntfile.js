@@ -176,19 +176,26 @@ module.exports = function(grunt) {
       }
     },
 
-    imagemin: {
-      build: {
-        options: {
-          optimizationLevel: 3
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= site.dev %>/<%= site.assets %>/img/',
-          src: ['**/*.{png,jpg,gif}'],
-          dest: '<%= site.dev %>/<%= site.assets %>/img/'
-        }]
-      }
-    },
+    // I removed this because it was slowing down other tasks
+    //
+    // https://github.com/gruntjs/grunt-contrib-imagemin
+    //
+    // devDependencies:
+    // "grunt-contrib-imagemin": "~0.3.0",
+    //
+    // imagemin: {
+    //   build: {
+    //     options: {
+    //       optimizationLevel: 3
+    //     },
+    //     files: [{
+    //       expand: true,
+    //       cwd: '<%= site.dev %>/<%= site.assets %>/img/',
+    //       src: ['**/*.{png,jpg,gif}'],
+    //       dest: '<%= site.dev %>/<%= site.assets %>/img/'
+    //     }]
+    //   }
+    // },
 
     useminPrepare: {
       html: ['<%= site.dev %>/**/*.html', '!<%= site.bower %>/**/*.html'],
@@ -242,7 +249,7 @@ module.exports = function(grunt) {
   grunt.registerTask('img',     ['copy:img']);
 
   // Compile tasks (prod)
-  grunt.registerTask('prod',    ['imagemin', 'copy:iconfont', 'useminPrepare', 'concat', 'cssmin', 'uglify', 'usemin', 'devcode', 'copy:prod', 'clean:dist']);
+  grunt.registerTask('prod',    [/*'imagemin', */'copy:iconfont', 'useminPrepare', 'concat', 'cssmin', 'uglify', 'usemin', 'devcode', 'copy:prod', 'clean:dist']);
   // Plugins
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   grunt.loadNpmTasks('assemble');
