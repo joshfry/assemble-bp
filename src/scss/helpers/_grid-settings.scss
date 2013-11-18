@@ -1,5 +1,3 @@
-@import "../../../dist/assets/bower/neat/app/assets/stylesheets/neat-helpers"; // or "neat/neat-helpers" when not in Rails
-
 // Neat Overrides
 ///////////////////////////////////////////////////////////////////////////////
 // $column: 90px;
@@ -25,12 +23,16 @@ $fg-gutter: $gutter;
 
 $max-width: em(1200);
 
+
 // TODO
 //
 // Experiment with Neat Breakpoints below
 
 // Neat Breakpoints
 ///////////////////////////////////////////////////////////////////////////////
+
+// @import "../../../dist/assets/bower/neat/app/assets/stylesheets/neat-helpers";
+
 // $small-screen: new-breakpoint(min-width em(540) 2);
 // $medium-screen: new-breakpoint(min-width em(760) 4);
 // $large-screen: new-breakpoint(min-width em(920) 8);
