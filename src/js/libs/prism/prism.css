@@ -29,7 +29,7 @@ pre[class*="language-"] {
   margin: .5em 0 1em;
   overflow: auto;
   background: #071022;
-  border-radius: 3px;
+  border-radius: .25em;
 }
 
 code[class*="language-"] {
@@ -40,7 +40,7 @@ code[class*="language-"] {
 /* Inline code */
 :not(pre) > code[class*="language-"] {
   padding: .2em;
-  border-radius: .3em;
+  border-radius: .25em;
   box-shadow: none;
 }
 

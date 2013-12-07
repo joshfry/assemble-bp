@@ -2,13 +2,24 @@
 // Author
 // -------------------------------------------------------------------
 
+@mixin vert-sep {
+  padding-top: 2em;
+  margin-top: 2em;
+  border-top: 1px solid #ccc;
+}
+.vert-sep {
+  @include vert-sep;
+}
+
+// -------------------------------------------------------------------
+
 .site-header,
 .site-footer {
   padding: 1em 0;
 }
 
 .site-main {
-  padding: 2.5em 0 4em;
+  padding: 2.5em 0;
 }
 
 .site-footer {

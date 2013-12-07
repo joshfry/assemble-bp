@@ -26,10 +26,11 @@
 // -------------------------------------------------------------------
 
 .button {
+  @include rounded-corners;
   position: relative;
   display: inline-block;
-  margin: 0;
   font: inherit;
+  font-weight: bold;
   color: inherit;
   background: transparent;
   border: none;
@@ -50,7 +51,16 @@
   padding: 0 1.25em;
   color: #fff;
   background-color: $primary;
-  border-radius: $unit/2;
+
+  width: 100%;
+  text-align: center;
+  @extend %paragraph-margin-bottom;
+
+  @include media(30em) {
+    width: auto;
+    margin-right: 1em;
+    margin-bottom: 0;
+  }
 
   &:hover {
     color: #fff;
