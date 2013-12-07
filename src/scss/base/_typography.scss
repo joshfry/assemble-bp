@@ -1,42 +1,91 @@
-// ------------------------------------------------------------
+// -------------------------------------------------------------------
 // Typography
-// ------------------------------------------------------------
+// -------------------------------------------------------------------
 
-h1, h2, h3, h4, h5, h6 {
-  text-rendering: optimizeLegibility; // Fix the character spacing for headings
-  margin: 0;
-  margin: .75em 0 .25em;
-  font-family: $header-font-family;
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
   line-height: 1.25em;
+  margin: 1em 0 .5em;
+  color: $header-font-color;
+  text-rendering: optimizeLegibility;
 }
-
-h1 {
-  font-size: $base-font-size * 2.25; // 16 * 2.25 = 36px
+h1, .h1 {
+  font-size: $base-font-size * 3;
+  line-height: 1;
+  letter-spacing: -1px;
+  margin-top: .375em;
+  margin-bottom: .25em;
 }
-
-h2 {
-  font-size: $base-font-size * 2; // 16 * 2 = 32px
+h2, .h2 {
+  font-size: $base-font-size * 2;
+  line-height: 1.125;
+  letter-spacing: -1px;
+  margin-bottom: .375em;
 }
-
-h3 {
-  font-size: $base-font-size * 1.75; // 16 * 1.75 = 28px
+h3, .h3 {
+  font-size: $base-font-size * 1.5;
+  line-height: 1.125;
+  letter-spacing: -1px;
 }
-
-h4 {
-  font-size: $base-font-size * 1.5; // 16 * 1.5 = 24px
-}
-
-h5 {
-  font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px
-}
-
-h6 {
+h4, .h4 {
+  margin: 1.5em 0 .25em;
   font-size: $base-font-size;
+}
+h5, .h5 {
+  @extend h4;
+}
+h6, .h6 {
+  @extend h4;
+}
+
+%paragraph-margin-bottom {
+  margin: 0 0 16px;
+  margin: 0 0 1rem;
 }
 
 p {
-  margin: 0 0 ($base-line-height * .5);
+  @extend %paragraph-margin-bottom;
+  // Currently used by
+  // - .hero
+  // - .callout
+  // _lists.scss > nav ul
 }
+
+// Classes
+// -------------------------------------------------------------------
+
+.section-title {
+  padding-bottom: .5em;
+  margin-bottom: .75em; // testing
+  border-bottom: 2px solid $light-gray;
+}
+
+.page-title {
+  font-family: $sans-serif;
+  margin: 0 0 .25em;
+  font-size: 3em;
+  line-height: 1;
+  letter-spacing: -1px;
+
+  @include media(45em) {
+    font-size: 4em;
+    margin: 0 0 .175em;
+  }
+}
+
+.intro {
+  font-family: $serif;
+  font-size: 1.125em;
+  line-height: 1.375;
+  color: #777;
+
+  @include media(45em) {
+    font-size: 1.4em;
+  }
+}
+
+// Basic elements
+// -------------------------------------------------------------------
 
 hr {
   border-bottom: 1px solid $base-border-color;

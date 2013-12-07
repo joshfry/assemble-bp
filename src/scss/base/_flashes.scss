@@ -1,5 +1,10 @@
+// -------------------------------------------------------------------
+// Flashes
+// -------------------------------------------------------------------
+
 /* Success, error & notice boxes for messages and errors. */
 %flash {
+  @include rounded-corners;
   margin-bottom: $base-line-height / 2;
   padding: $base-line-height / 2;
   font-weight: bold;

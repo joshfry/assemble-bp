@@ -1,25 +1,28 @@
-// Mobile nav breakpoint
-$mobile-nav-breakpoint: 30em;
-
 // ------------------------------------------------------------
 // Site Nav
 // ------------------------------------------------------------
 
+// Mobile nav breakpoint
+$mobile-nav-breakpoint: 30em;
+
 .site-nav {
   @include clearfix;
-  padding: $unit 0;
+
   .navbar-brand {
     display: block;
+
     @include media($mobile-nav-breakpoint) {
       margin-right: $unit;
       float: left;
     }
   }
+
   .site-logo {
     display: block;
     border-radius: 100%;
     margin: auto;
   }
+
   .nav-links {
     height: 0;
     overflow: hidden;
@@ -38,6 +41,7 @@ $mobile-nav-breakpoint: 30em;
         padding: 50px $unit;
       }
     }
+
     .nav-right {
       @include media($mobile-nav-breakpoint) {
         float: right;
@@ -59,9 +63,11 @@ $mobile-nav-breakpoint: 30em;
   z-index: 2;
   text-align: center;
   color: $primary;
+
   @include media($mobile-nav-breakpoint) {
     display: none;
   }
+
   .icon {
     display: block;
     font-size: 2em;
@@ -77,6 +83,7 @@ $mobile-nav-breakpoint: 30em;
   .mobile-menu {
     color: $tertiary;
   }
+
   .nav-links {
     height: auto;
     overflow: auto;

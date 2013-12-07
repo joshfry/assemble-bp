@@ -1,0 +1,16 @@
+// -------------------------------------------------------------------
+// Module
+//
+// Removes top margin from first child element
+// and bottom margin from last child element
+// -------------------------------------------------------------------
+
+
+@mixin module {
+  > *:first-child { margin-top: 0; }
+  > *:last-child { margin-bottom: 0; }
+}
+// Enable .module class
+.module {
+  @include module;
+}

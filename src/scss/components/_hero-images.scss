@@ -1,0 +1,59 @@
+// -------------------------------------------------------------------
+// Hero Images
+// -------------------------------------------------------------------
+
+.hero {
+  display: block;
+  @include rounded-corners;
+  // Use the same margin-bottom as paragraphs
+  @extend %paragraph-margin-bottom;
+
+  img {
+    display: block;
+  }
+}
+
+// Hero Flex
+// -------------------------------------------------------------------
+
+.hero-flex {
+  @extend .hero;
+
+  img {
+    // max-width: 125%;
+    // margin-left: -12.5%;
+    max-width: 137.5%;
+    margin-left: -18.75%;
+
+    @include media(35em) {
+      max-width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+// Hero Overlay
+// -------------------------------------------------------------------
+
+.hero-overlay {
+  img {
+    @include media(55em) {
+      @include rounded-corners;
+    }
+  }
+  .hero-overlay-content {
+    @include module;
+    position: relative;
+    padding: em(20);
+    text-align: center;
+    background: $white;
+
+    @include media(35em) {
+      padding: em(30);
+    }
+    @include media(55em) {
+      margin: em(-40) em(40) 0;
+      @include rounded-corners;
+    }
+  }
+}

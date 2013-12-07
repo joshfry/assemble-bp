@@ -1,0 +1,86 @@
+// -------------------------------------------------------------------
+// Skeleton Grid
+// -------------------------------------------------------------------
+
+/*
+  1 - Semantic classes for auto-clearing floats
+  2 - Class .row adds bottom margin
+  3 - Add class .omega to the last item in each row
+*/
+/* 1 */ .row, .group, .cf { @include clearfix; }
+// /* 2 */ .row { margin-bottom: $unit*1.5; }
+/* 3 */ .omega { margin-right: 0!important; }
+
+// Stack columns below 720px by default...
+//
+// ...or provide a custom breakpoint like this:
+//
+// .grid-skeleton-demo {
+//   @include skeleton-grid(30em);
+// }
+//
+// @include skeleton-grid() is currently used by membership forms.
+// A 45em breakpoint was too wide, so we used 30em instead.
+//
+// -------------------------------------------------------------------
+
+@mixin skeleton-grid($skeleton-grid-breakpoint) {
+  @include media($skeleton-grid-breakpoint) {
+    // Base Grid
+    .one.column,.one.columns,.two.columns,.three.columns,.four.columns,.five.columns,.six.columns,.seven.columns,.eight.columns,.nine.columns,.ten.columns,.eleven.columns,.twelve.columns,
+    .span1,.span2,.span3,.span4,.span5,.span6,.span7,.span8,.span9,.span10,.span11,.span12,
+    .half.column, .half, .one-third.column, .one-third, .two-thirds.column, .two-thirds {
+      clear: none;
+    }
+    .one.column,
+    .one.columns, .span1 { @include span-columns(1); }
+    .two.columns, .span2 { @include span-columns(2); }
+    .three.columns, .span3 { @include span-columns(3); }
+    .four.columns, .span4 { @include span-columns(4); }
+    .five.columns, .span5 { @include span-columns(5); }
+    .six.columns, .span6 { @include span-columns(6); }
+    .seven.columns, .span7 { @include span-columns(7); }
+    .eight.columns, .span8 { @include span-columns(8); }
+    .nine.columns, .span9 { @include span-columns(9); }
+    .ten.columns, .span10 { @include span-columns(10); }
+    .eleven.columns, .span11 { @include span-columns(11); }
+    .twelve.columns, .span12 { @include span-columns(12); margin-right: 0 }
+
+    .half.column, .half { @include span-columns(6); }
+    .one-third.column, .one-third { @include span-columns(4); }
+    .two-thirds.column, .two-thirds { @include span-columns(8); }
+
+    // Push
+    .offset-by-one, .push1 { @include shift(1); }
+    .offset-by-two, .push2 { @include shift(2); }
+    .offset-by-three, .push3 { @include shift(3); }
+    .offset-by-four, .push4 { @include shift(4); }
+    .offset-by-five, .push5 { @include shift(5); }
+    .offset-by-six, .push6 { @include shift(6); }
+    .offset-by-seven, .push7 { @include shift(7); }
+    .offset-by-eight, .push8 { @include shift(8); }
+    .offset-by-nine, .push9 { @include shift(9); }
+    .offset-by-ten, .push10 { @include shift(10); }
+    .offset-by-eleven, .push11 { @include shift(11); }
+
+    // Pull
+    .pull1 { @include shift(-1); }
+    .pull2 { @include shift(-2); }
+    .pull3 { @include shift(-3); }
+    .pull4 { @include shift(-4); }
+    .pull5 { @include shift(-5); }
+    .pull6 { @include shift(-6); }
+    .pull7 { @include shift(-7); }
+    .pull8 { @include shift(-8); }
+    .pull9 { @include shift(-9); }
+    .pull10 { @include shift(-10); }
+    .pull11 { @include shift(-11); }
+  }
+}
+
+// Initialize Skeleton Grid on the body
+// -------------------------------------------------------------------
+
+body {
+  @include skeleton-grid(45em);
+}

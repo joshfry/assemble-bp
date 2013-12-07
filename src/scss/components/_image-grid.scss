@@ -1,0 +1,74 @@
+// -------------------------------------------------------------------
+// Image Grid
+// -------------------------------------------------------------------
+
+// Settings
+
+$ig-img_max_width           : 280px;
+$ig-img_align               : center;
+$ig-title_text_align        : left;
+$ig-title_font_size         : $unit;
+$ig-item_vertical_spacing   : $unit;
+$ig-item_details_padding    : $unit/1.5 0;
+
+// Base
+
+.image-grid {
+  @include clearfix;
+
+  .image-grid-item {
+    display: block;
+    margin-bottom: $ig-item_vertical_spacing;
+
+    .image-grid-item-inner {
+      max-width: $ig-img_max_width;
+      @if $ig-img_align == center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .image-grid-item-details {
+      @include module;
+      padding: $ig-item_details_padding;
+    }
+
+    .image-grid-item-title {
+      font-size: $ig-title_font_size;
+      text-align: $ig-title_text_align;
+    }
+  }
+}
+
+// Default grid: 2 -> 3 -> 4
+// -------------------------------------------------------------------
+
+.image-grid {
+  .image-grid-item {
+    @include span-columns(6);
+    @include omega(2n);
+    @include media(720px) {
+      @include omega-reset(2n);
+      @include span-columns(4);
+      @include omega(3n);
+    }
+    @include media(960px) {
+      @include omega-reset(3n);
+      @include span-columns(3);
+      @include omega(4n);
+    }
+  }
+}
+
+// Alternate grid template
+// -------------------------------------------------------------------
+
+.image-grid--alt {
+  @extend .image-grid;
+  .image-grid-item {
+    @include media(480px) {}
+    @include media(720px) {}
+    @include media(960px) {}
+    @include media(1200px) {}
+  }
+}

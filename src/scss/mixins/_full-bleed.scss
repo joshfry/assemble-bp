@@ -1,0 +1,22 @@
+// -------------------------------------------------------------------
+// Full Bleed
+//
+// Let the container span edge-to-edge.
+// -------------------------------------------------------------------
+
+@mixin full-bleed {
+  padding-left: 0;
+  padding-right: 0;
+}
+// Apply .full-bleed to a section: targets direct .container child
+.full-bleed {
+  > .container {
+    @include full-bleed;
+  }
+}
+// ... or apply it directly to a container
+.container {
+  &.full-bleed {
+    @include full-bleed;
+  }
+}

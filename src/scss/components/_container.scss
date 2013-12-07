@@ -1,6 +1,6 @@
-// ------------------------------------------------------------
+// -------------------------------------------------------------------
 // Container
-// ------------------------------------------------------------
+// -------------------------------------------------------------------
 
 // .container {
 //   @include outer-container;
@@ -28,4 +28,24 @@
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+// Alt container sizes
+// -------------------------------------------------------------------
+
+.container--narrow {
+  @extend .container;
+  max-width: $container-narrow;
+}
+.container--super-narrow {
+  @extend .container;
+  max-width: $container-super-narrow;
+}
+.container--mobile {
+  @extend .container;
+  max-width: $container-mobile;
+}
+
+@mixin container {
+  @extend .container;
 }

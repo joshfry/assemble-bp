@@ -1,8 +1,8 @@
-// ------------------------------------------------------------
-// Base resets
-// ------------------------------------------------------------
+// -------------------------------------------------------------------
+// Reset
+// -------------------------------------------------------------------
 
-// Box sizing is handeled with Bourbon
+// Box sizing is handled with Bourbon
 // * {
 //   -webkit-box-sizing: border-box;
 //   -moz-box-sizing: border-box;
@@ -14,13 +14,13 @@ html {
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
   font-size: $base-font-size;
   line-height: $base-line-height;
   font-weight: $base-font-weight;
   font-family: $base-font-family;
-  background: $white;
   color: $base-font-color;
+  background-color: $base-background-color;
+  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
@@ -32,7 +32,6 @@ a {
   color: $base-link-color;
   text-decoration: none;
   outline: 0;
-  @include transition(color 0.1s linear);
 
   &:hover {
     color: $hover-link-color;

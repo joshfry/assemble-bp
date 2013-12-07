@@ -1,0 +1,98 @@
+// -------------------------------------------------------------------
+// Variables
+// -------------------------------------------------------------------
+
+// Dev Options
+// -------------------------------------------------------------------
+
+$show_media_queries : true;
+$show_baseline_grid : false;
+$show_line_length: false;
+
+// Colors
+// -------------------------------------------------------------------
+
+$primary: #2379cf;
+$secondary: #001275;
+$tertiary: #e25a00;
+
+$primary-light: lighten($primary,25%);
+$primary-light-accent: lighten($primary,30%);
+$primary-lighter: lighten($primary,45%);
+$primary-lighter-accent: lighten($primary,35%);
+$primary-dark: darken($primary,15%);
+$primary-darker: darken($primary,30%);
+
+$tertiary-dark: darken($tertiary,15%);
+$tertiary-darker: darken($tertiary,30%);
+
+$black: #000;
+$light-black: #444;
+$light-gray: #ddd;
+$gray: #ccc;
+$dark-gray: #999;
+$white-smoke: #eee;
+$white: #fff;
+
+$light-red: #EBCCD1;
+$light-yellow: #FAEBCC;
+$light-green: #D6E9C6;
+
+// Body Background Color
+$base-background-color: $white-smoke;
+
+// Selection Color
+$selection-color: #FF69B4;
+
+// Syntax highlighting
+$syntax-bg-color: #071022;
+
+// Typography
+// -------------------------------------------------------------------
+
+$base-font-size: 1em;
+$base-line-height: $base-font-size * 1.6;
+$base-font-weight: 400;
+
+$sans-serif: "proxima-nova", sans-serif;
+$serif: $georgia;
+
+$base-font-family: $sans-serif;
+$header-font-family: $base-font-family; // currently not in use
+
+// Sidebar
+$base-sidebar-font-size: 1em * .875;
+$base-sidebar-line-height: $base-font-size * 1.6;
+
+// Font Colors
+$base-font-color: $light-black;
+$base-accent-color: $primary;
+$header-font-color: #333;
+
+// Text Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: $tertiary;
+
+// Border color
+$base-border-color: $light-gray;
+
+// Flash Colors
+$error-color: $light-red;
+$notice-color: $light-yellow;
+$success-color: $light-green;
+
+// Sizes
+// -------------------------------------------------------------------
+
+$unit: $base-font-size;
+
+$base-padding: em(24); // Currently used by 'callout' mixin
+
+$base-border-radius: em(4);
+
+$container: $max-width;
+
+// Alt container sizes
+$container-narrow          : 60em; // 960px
+$container-super-narrow    : 45em; // 720px
+$container-mobile          : 30em; // 480px

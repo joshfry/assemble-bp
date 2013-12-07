@@ -1,3 +1,7 @@
+// -------------------------------------------------------------------
+// Lists
+// -------------------------------------------------------------------
+
 // ul, ol {
 //   margin: 0;
 //   padding: 0;
@@ -16,19 +20,63 @@
 //   }
 // }
 
-// ------------------------------------------------------------
+ul, ol {
+  margin: 0;
+  @extend %paragraph-margin-bottom;
+  padding: 0 0 0 $unit*1.5; // use $base-padding once it's integrated
+
+  li {
+    margin-bottom: .625em;
+  }
+}
+
+// -------------------------------------------------------------------
 // I prefer my method of removing list styles
 // only if nested within <nav>
 
 nav {
   ul {
-    margin: 0 0 ($base-line-height * .5);
+    @extend %paragraph-margin-bottom;
     padding: 0;
     list-style: none;
+    li {
+      margin: 0;
+      padding: 0;
+    }
   }
 }
 
-// ------------------------------------------------------------
+// Reset ul styles
+// -------------------------------------------------------------------
+
+%ul-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.ul-reset {
+  @extend %ul-reset;
+}
+
+// List of links
+// Allows <a>'s inside of <li>'s to be larger touch targets
+// -------------------------------------------------------------------
+
+.list-of-links {
+  @extend %ul-reset;
+  li {
+    margin: 0;
+    padding: 0;
+    a {
+      display: block;
+      padding: .5em 0;
+      line-height: 1.25;
+    }
+  }
+}
+
+// -------------------------------------------------------------------
 
 dl {
   line-height: $base-line-height;
