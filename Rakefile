@@ -7,7 +7,7 @@ def consoleHeading(taskName)
 
 end
 
-task :setup do
+task :init do
 
   puts  consoleHeading('Installing Bundler')
   sh    'gem install bundler'
@@ -20,7 +20,7 @@ task :setup do
 
 end
 
-task :install do
+task :default do
 
   puts  consoleHeading('Installing Ruby Gems')
   sh    'bundle install --path=vendor'

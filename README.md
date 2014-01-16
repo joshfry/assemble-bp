@@ -10,16 +10,16 @@ A front-end tool for generating static sites with [Grunt](http://gruntjs.com/), 
     - [Rake](http://rake.rubyforge.org) `gem install rake`
 - [Node](http://nodejs.org)
 
-#### Setup
+#### One-time Setup
 
-    $ rake setup
+    $ rake init
 
 - Installs Grunt CLI
 - Installs Bower CLI
     
 #### Install
 
-    $ rake install
+    $ rake
 
 - Installs Ruby Gems to `/vendor/ruby`
 - Installs Bower packages to `/vendor/bower`
