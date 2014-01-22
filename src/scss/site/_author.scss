@@ -2,16 +2,7 @@
 // Author
 // -------------------------------------------------------------------
 
-@mixin vert-sep {
-  padding-top: 2em;
-  margin-top: 2em;
-  border-top: 1px solid #ccc;
-}
-.vert-sep {
-  @include vert-sep;
-}
-
-// -------------------------------------------------------------------
+@import "site-nav";
 
 .site-header,
 .site-footer {
@@ -31,6 +22,7 @@
 
   @include media(30em) {
     .content {
+      @include clearfix;
       font-size: .9em;
     }
     .copyright, .badge {

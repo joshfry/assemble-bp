@@ -2,7 +2,7 @@
 // Image replacement
 // -------------------------------------------------------------------
 
-@mixin ir {
+@mixin hide-text {
   position: absolute;
   font-size: 0;
   line-height: 0;

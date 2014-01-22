@@ -1,0 +1,128 @@
+// -------------------------------------------------------------------
+// Buttons
+// -------------------------------------------------------------------
+
+/*
+
+  ## Button
+  <a class="btn">Button</a>
+  <a class="btn is-active">Button</a>
+  <a class="btn is-disabled">Button</a>
+
+  ## Button Large
+  <a class="btn lrg">Button</a>
+  <a class="btn lrg is-active">Button</a>
+  <a class="btn lrg is-disabled">Button</a>
+
+  ## Button Alt
+  <a class="btn alt">Button</a>
+  <a class="btn alt is-active">Button</a>
+  <a class="btn alt is-disabled">Button</a>
+
+  ## Button Alt Large
+  <a class="btn alt lrg">Button</a>
+  <a class="btn alt lrg is-active">Button</a>
+  <a class="btn alt lrg is-disabled">Button</a>
+
+*/
+
+// Remove button defaults
+@mixin button-reset {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+// Add complimentary text next to a button
+@mixin unbutton {
+  position: relative;
+  display: inline-block;
+
+}
+
+@mixin button($button-background-color: $primary, $button-text-color: $white, $button-hover-background-color: $primary-dark, $button-hover-text-color: $white) {
+  @include trailing-hovers;
+  @include button-reset;
+  @include rounded-corners;
+  @include margin;
+
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+
+  width: 100%;
+  padding: 0 1em;
+
+  @include media(30em) {
+    width: auto;
+    margin: 0 $base-margin-px/2 $base-margin-px 0;
+    margin: 0 $base-margin-rem/2 $base-margin-rem 0;
+  }
+
+  font-size: 1em;
+  line-height: 2.5em;
+  font-weight: bold;
+  text-align: center;
+
+  cursor: pointer;
+
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+
+  border: none;
+  background-color: $button-background-color;
+  color: $button-text-color;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover, &.hover,
+  &:active, &.is-active {
+    color: $button-hover-text-color;
+    background-color: $button-hover-background-color;
+  }
+
+  &:disabled,
+  &.is-disabled {
+    opacity: .5;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &.large,
+  &.lrg {
+    font-size: 1.375em;
+  }
+
+  &.alt {
+    color: $button-background-color;
+    background: none;
+    border: 2px solid $button-background-color;
+
+    &:hover,
+    &:active,
+    &.is-active {
+      color: $button-hover-text-color;
+      background: $button-background-color;
+    }
+  }
+}
+
+.button,
+.btn {
+  @include button;
+}
+
+// Button Large Alt
+
+// .button--large--alt {
+//   @extend .button--large;
+//   @extend .button--alt;
+// }

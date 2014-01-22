@@ -21,9 +21,8 @@
 // }
 
 ul, ol {
-  margin: 0;
-  @extend %paragraph-margin-bottom;
-  padding: 0 0 0 $unit*1.5; // use $base-padding once it's integrated
+  @include margin;
+  padding-left: $base-padding;
 
   li {
     margin-bottom: .125em;
@@ -36,7 +35,7 @@ ul, ol {
 
 nav {
   ul {
-    @extend %paragraph-margin-bottom;
+    @include margin;
     padding: 0;
     list-style: none;
     li {

@@ -1,3 +1,12 @@
 <nav class="site-nav" role="navigation">
-  {{> nav }}
+  <a class="navbar-brand" href="/">
+    <img class="site-logo" src="http://placehold.it/100x100" alt="">
+  </a>
+
+  <div class="nav-links">
+      <a{{#is basename "index"}} class="active"{{/is}} href="/"><i class="icon-star_empty"></i> Home</a>
+      <a{{#is basename "test"}} class="active"{{/is}} href="/test"><i class="icon-eye"></i> Test</a>
+      <a class="nav-right" href="https://github.com/joshfry/boilerplate" target="_blank"><i class="icon-share"></i> GitHub</a>
+      <div class="mobile-menu"><i class="icon icon-reorder"></i></div>
+  </div>
 </nav>

@@ -38,17 +38,8 @@ h6, .h6 {
   @extend h4;
 }
 
-%paragraph-margin-bottom {
-  margin: 0 0 16px;
-  margin: 0 0 1rem;
-}
-
 p {
-  @extend %paragraph-margin-bottom;
-  // Currently used by
-  // - .hero
-  // - .callout
-  // _lists.scss > nav ul
+  @include margin;
 }
 
 // Classes

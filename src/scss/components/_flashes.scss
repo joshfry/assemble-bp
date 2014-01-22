@@ -5,9 +5,8 @@
 /* Success, error & notice boxes for messages and errors. */
 %flash {
   @include rounded-corners;
-  margin-bottom: $base-line-height / 2;
-  padding: $base-line-height / 2;
-  font-weight: bold;
+  @include margin;
+  padding: $base-padding/3 $base-padding/1.5;
 }
 
 .error, #flash_failure {

@@ -10,17 +10,16 @@ layout: base.hbs
 <body {{#if bodyClass}}class="{{bodyClass}}"{{/if}}>
   <header class="site-header" role="banner">
     <div class="container">
-      <div class="content">
-        {{> header }}
-      </div>
+      {{> header }}
     </div>
   </header>
   <main class="site-main" role="main">
     <div class="container">
-      <div class="content">
-        {{> page-header }}
-        {{> body }}
-      </div>
+      <header class="page-header">
+        <h1 class="page-title">{{#if pageTitle}}{{capitalizeEach pageTitle}}{{else}}{{capitalizeEach title}}{{/if}}</h1>
+        {{#if description}}<p class="intro">{{description}}</p>{{/if}}
+      </header>
+      {{> body }}
     </div>
   </main>
   <footer class="site-footer" role="contentinfo">

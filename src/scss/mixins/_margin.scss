@@ -1,0 +1,10 @@
+// -------------------------------------------------------------------
+// Paragraph Spacing
+//
+// Using rems with px fallback for vertical spacing consistency
+// -------------------------------------------------------------------
+
+@mixin margin {
+  margin: 0 0 $base-margin-px;
+  margin: 0 0 $base-margin-rem;
+}

@@ -79,10 +79,12 @@ select {
 }
 
 button,
+button.button,
 input[type="submit"] {
   @include appearance(none);
-  @include button(simple, $base-accent-color);
+  @include button;
   font-size: $base-font-size;
+  font-weight: $base-font-weight;
   cursor: pointer;
   user-select: none;
   vertical-align: middle;

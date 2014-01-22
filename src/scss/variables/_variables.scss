@@ -34,9 +34,9 @@ $dark-gray: #999;
 $white-smoke: #eee;
 $white: #fff;
 
-$light-red: #EBCCD1;
-$light-yellow: #FAEBCC;
-$light-green: #D6E9C6;
+$red: #e74c3c;
+$green: #2ecc71;
+$yellow: #f1c40f;
 
 // Body Background Color
 $base-background-color: $white-smoke;
@@ -77,16 +77,19 @@ $hover-link-color: $tertiary;
 $base-border-color: $light-gray;
 
 // Flash Colors
-$error-color: $light-red;
-$notice-color: $light-yellow;
-$success-color: $light-green;
+$error-color: lighten($red,25%);
+$notice-color: lighten($yellow,25%);
+$success-color: lighten($green,25%);
 
 // Sizes
 // -------------------------------------------------------------------
 
 $unit: $base-font-size;
 
-$base-padding: em(24); // Currently used by 'callout' mixin
+$base-margin-px: 20px; // was 16px
+$base-margin-rem: 1.25rem; // was 1rem
+
+$base-padding: em(24);
 
 $base-border-radius: em(4);
 

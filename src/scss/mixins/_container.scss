@@ -2,32 +2,24 @@
 // Container
 // -------------------------------------------------------------------
 
-// .container {
-//   @include outer-container;
-//   padding-left: $unit*1.5;
-//   padding-right: $unit*1.5;
-//   @include media($container+$unit*3) {
-//     padding-left: 0;
-//     padding-right: 0;
-//   }
-// }
-
-// The added 7.5% padding is a nice touch
-
-.container {
+@mixin container {
   @include outer-container;
-  padding-left: 7.5%;
-  padding-right: 7.5%;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
 
   @include media(65em) {
-    padding-left: 1.5em;
-    padding-right: 1.5em;
+    padding-left: $base-padding;
+    padding-right: $base-padding;
   }
 
   @include media($container+$unit*3) {
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+.container {
+  @include container;
 }
 
 // Alt container sizes
@@ -44,8 +36,4 @@
 .container--mobile {
   @extend .container;
   max-width: $container-mobile;
-}
-
-@mixin container {
-  @extend .container;
 }

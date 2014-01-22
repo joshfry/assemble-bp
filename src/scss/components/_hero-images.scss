@@ -3,10 +3,9 @@
 // -------------------------------------------------------------------
 
 .hero {
-  display: block;
   @include rounded-corners;
-  // Use the same margin-bottom as paragraphs
-  @extend %paragraph-margin-bottom;
+  @include margin;
+  display: block;
 
   img {
     display: block;
