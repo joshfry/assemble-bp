@@ -1,0 +1,24 @@
+// -------------------------------------------------------------------
+// Padded
+// -------------------------------------------------------------------
+
+@mixin padded {
+  padding: {
+    top: $base-padding/1.5;
+    bottom: $base-padding/1.5;
+  }
+}
+
+@mixin padded-medium {
+  padding: {
+    top: $base-padding;
+    bottom: $base-padding;
+  }
+}
+
+@mixin padded-large {
+  padding: {
+    top: $base-padding*1.5;
+    bottom: $base-padding*1.5;
+  }
+}

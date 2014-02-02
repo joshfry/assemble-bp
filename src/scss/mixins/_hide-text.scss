@@ -1,5 +1,5 @@
 // -------------------------------------------------------------------
-// Image replacement
+// Hide text
 // -------------------------------------------------------------------
 
 @mixin hide-text {
@@ -7,4 +7,8 @@
   font-size: 0;
   line-height: 0;
   opacity: 0;
+}
+
+.hide-text {
+  @include hide-text;
 }

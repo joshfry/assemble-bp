@@ -26,6 +26,17 @@
 
 */
 
+// -------------------------------------------------------------------
+
+$base-button-font-size: $base-font-size;
+$base-button-large-font-size: $base-font-size * 1.375;
+
+$base-button-line-height: 2.5;
+
+$button-disabled-opacity: .5;
+
+// -------------------------------------------------------------------
+
 // Remove button defaults
 @mixin button-reset {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -55,7 +66,7 @@
   vertical-align: top;
 
   width: 100%;
-  padding: 0 1em;
+  padding: 0 $unit;
 
   @include media(30em) {
     width: auto;
@@ -63,9 +74,8 @@
     margin: 0 $base-margin-rem/2 $base-margin-rem 0;
   }
 
-  font-size: 1em;
-  line-height: 2.5em;
-  font-weight: bold;
+  font-size: $base-button-font-size;
+  line-height: $base-button-line-height;
   text-align: center;
 
   cursor: pointer;
@@ -91,14 +101,14 @@
 
   &:disabled,
   &.is-disabled {
-    opacity: .5;
+    opacity: $button-disabled-opacity;
     cursor: default;
     pointer-events: none;
   }
 
   &.large,
   &.lrg {
-    font-size: 1.375em;
+    font-size: $base-button-large-font-size;
   }
 
   &.alt {
@@ -119,10 +129,3 @@
 .btn {
   @include button;
 }
-
-// Button Large Alt
-
-// .button--large--alt {
-//   @extend .button--large;
-//   @extend .button--alt;
-// }

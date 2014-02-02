@@ -1,0 +1,70 @@
+// -------------------------------------------------------------------
+// Triangle
+// -------------------------------------------------------------------
+
+@mixin triangle ($size, $color, $direction, $position) {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+
+    @if ($direction == up) or ($direction == down) {
+      left: 50%;
+      margin-left: -$size;
+
+    } @else if ($direction == right) or ($direction == left) {
+      top: 50%;
+      margin-top: -$size;
+    }
+
+    @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
+      border-color: transparent;
+      border-style: solid;
+      border-width: $size;
+
+      @if $direction == up {
+        border-bottom-color: $color;
+
+        @if $position == outside {
+          bottom: 100%;
+
+        } @else if $position == inside {
+          bottom: 0;
+        }
+
+      } @else if $direction == right {
+        border-left-color: $color;
+
+        @if $position == outside {
+          left: 100%;
+
+        } @else if $position == inside {
+          left: 0;
+        }
+
+      } @else if $direction == down {
+        border-top-color: $color;
+
+        @if $position == outside {
+          top: 100%;
+
+        } @else if $position == inside {
+          top: 0;
+        }
+
+      } @else if $direction == left {
+        border-right-color: $color;
+
+        @if $position == outside {
+          right: 100%;
+
+        } @else if $position == inside {
+          right: 0;
+        }
+      }
+    }
+  }
+}

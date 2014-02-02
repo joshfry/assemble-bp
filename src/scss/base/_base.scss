@@ -9,6 +9,10 @@
 //   box-sizing: border-box;
 // }
 
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+}
+
 html {
   font-size: 100%;
 }
@@ -20,7 +24,6 @@ body {
   font-family: $base-font-family;
   color: $base-font-color;
   background-color: $base-background-color;
-  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
@@ -39,17 +42,5 @@ a {
   &:active, &:focus {
     color: $hover-link-color;
     outline: none;
-  }
-}
-
-img {
-  margin: 0;
-  max-width: 100%;
-  height: auto;
-
-  // Make images display block and
-  // remove the annoying space underneath.
-  &.img {
-    display: block;
   }
 }

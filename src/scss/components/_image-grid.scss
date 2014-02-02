@@ -4,11 +4,11 @@
 
 // Settings
 
-$ig-img_max_width           : 280px;
+$ig-img_max_width           : 225px;
 $ig-img_align               : center;
-$ig-title_text_align        : left;
-$ig-title_font_size         : $unit;
-$ig-item_vertical_spacing   : $unit;
+$ig-text_align              : left;
+$ig-line_height             : 1.4;
+$ig-item_vertical_spacing   : $gutter-spacing;
 $ig-item_details_padding    : $unit/1.5 0;
 
 // Base
@@ -16,27 +16,38 @@ $ig-item_details_padding    : $unit/1.5 0;
 .image-grid {
   @include clearfix;
 
-  .image-grid-item {
+  img {
+    @include rounded-corners;
+    display: block;
+  }
+
+  .item {
     display: block;
     margin-bottom: $ig-item_vertical_spacing;
+  }
 
-    .image-grid-item-inner {
-      max-width: $ig-img_max_width;
-      @if $ig-img_align == center {
-        margin-left: auto;
-        margin-right: auto;
+  a.item {
+    img {
+      transition: opacity .3s;
+      &:hover {
+        opacity: .5;
+        transition: 0s;
       }
     }
+  }
 
-    .image-grid-item-details {
-      @include module;
-      padding: $ig-item_details_padding;
+  .inner {
+    max-width: $ig-img_max_width;
+    @if $ig-img_align == center {
+      margin-left: auto;
+      margin-right: auto;
     }
+  }
 
-    .image-grid-item-title {
-      font-size: $ig-title_font_size;
-      text-align: $ig-title_text_align;
-    }
+  .content {
+    @include module;
+    padding: $ig-item_details_padding;
+    text-align: $ig-text_align;
   }
 }
 
@@ -44,7 +55,7 @@ $ig-item_details_padding    : $unit/1.5 0;
 // -------------------------------------------------------------------
 
 .image-grid {
-  .image-grid-item {
+  .item {
     @include span-columns(6);
     @include omega(2n);
     @include media(720px) {
@@ -65,7 +76,7 @@ $ig-item_details_padding    : $unit/1.5 0;
 
 .image-grid--alt {
   @extend .image-grid;
-  .image-grid-item {
+  .item {
     @include media(480px) {}
     @include media(720px) {}
     @include media(960px) {}

@@ -2,42 +2,29 @@
 // Lists
 // -------------------------------------------------------------------
 
-// ul, ol {
-//   margin: 0;
-//   padding: 0;
-//   list-style-type: none;
-
-//   &%default-ul {
-//     list-style-type: disc;
-//     margin-bottom: $base-line-height / 2;
-//     padding-left: $base-line-height;
-//   }
-
-//   &%default-ol {
-//     list-style-type: decimal;
-//     margin-bottom: $base-line-height / 2;
-//     padding-left: $base-line-height;
-//   }
-// }
-
 ul, ol {
   @include margin;
   padding-left: $base-padding;
-
-  li {
-    margin-bottom: .125em;
-  }
 }
 
+ul ul, ul ul ul,
+ol ol, ol ol ol {
+  margin-bottom: 0;
+}
+
+// <ul>'s within <nav>'s
 // -------------------------------------------------------------------
-// I prefer my method of removing list styles
-// only if nested within <nav>
 
 nav {
   ul {
     @include margin;
     padding: 0;
     list-style: none;
+
+    ul, ul ul {
+      margin-bottom: 0;
+    }
+
     li {
       margin: 0;
       padding: 0;
@@ -45,36 +32,7 @@ nav {
   }
 }
 
-// Reset ul styles
-// -------------------------------------------------------------------
-
-%ul-reset {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.ul-reset {
-  @extend %ul-reset;
-}
-
-// List of links
-// Allows <a>'s inside of <li>'s to be larger touch targets
-// -------------------------------------------------------------------
-
-.list-of-links {
-  @extend %ul-reset;
-  li {
-    margin: 0;
-    padding: 0;
-    a {
-      display: block;
-      padding: .5em 0;
-      line-height: 1.25;
-    }
-  }
-}
-
+// Definition lists
 // -------------------------------------------------------------------
 
 dl {

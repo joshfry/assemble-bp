@@ -1,0 +1,22 @@
+---
+layout: base.hbs
+---
+
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  {{> head }}
+</head>
+<body {{#if bodyClass}}class="{{bodyClass}}"{{/if}}>
+  <header class="site-header" role="banner">
+    {{> header }}
+  </header>
+  <main class="site-main" role="main">
+    {{> body }}
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    {{> footer }}
+  </footer>
+  {{> scripts }}
+</body>
+</html>

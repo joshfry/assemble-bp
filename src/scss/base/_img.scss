@@ -1,0 +1,15 @@
+// -------------------------------------------------------------------
+// Images
+// -------------------------------------------------------------------
+
+img {
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+
+  // Make images display block to
+  // remove the annoying space underneath.
+  &.img {
+    display: block;
+  }
+}

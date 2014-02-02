@@ -15,13 +15,16 @@
 // Mixins
 @import "mixins/container";
 @import "mixins/full-bleed";
+@import "mixins/hide-text";
+@import "mixins/lists";
+@import "mixins/margin";
 @import "mixins/module";
 @import "mixins/omega-reset";
-@import "mixins/hide-text";
-@import "mixins/margin";
+@import "mixins/padded";
 @import "mixins/rounded-corners";
 @import "mixins/trailing-hovers";
 @import "mixins/buttons";
+@import "mixins/triangle";
 
 // Dev
 @import "dev/media-queries";
@@ -32,6 +35,7 @@
 @import "base/base";
 @import "base/typography";
 @import "base/lists";
+@import "base/img";
 @import "base/code";
 @import "base/tables";
 @import "base/forms";

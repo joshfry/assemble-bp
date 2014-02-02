@@ -1,0 +1,17 @@
+# Server
+port: 8000
+
+# Bower directory
+bower: dist/assets/bower
+
+# Bower > icon font > fonts directory
+iconFont: mfglabs-iconset/css/font
+
+# Site build variables
+dev: dist
+prod: build
+assets: assets
+assemble: src/assemble
+
+# Site info
+name: Boilerplate

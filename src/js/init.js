@@ -1,1 +1,5 @@
-console.log('%c\n----------------------------------------------------\n- src/js/components/ are auto concat in development.\n- Use init.js for initializing jQuery plugins, etc.\n----------------------------------------------------', 'color: #2379cf');
+// -------------------------------------------------------------------
+// init.js
+//
+// This is the last loading script. Initialize jQuery plugins, etc.
+// -------------------------------------------------------------------

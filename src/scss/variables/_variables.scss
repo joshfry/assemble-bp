@@ -7,7 +7,20 @@
 
 $show_media_queries : true;
 $show_baseline_grid : false;
-$show_line_length: false;
+
+// Breakpoints
+// -------------------------------------------------------------------
+
+$sitenav-breakpoint: 45em;
+$sitenav-mobile_only: max-width $sitenav-breakpoint - 0.0625em;
+
+// @include media($sitenav-breakpoint) {}
+// @include media($sitenav-mobile_only) {}
+
+// Grid helpers
+// -------------------------------------------------------------------
+
+$gutter-spacing: flex-gutter($parent-columns);
 
 // Colors
 // -------------------------------------------------------------------
@@ -54,7 +67,7 @@ $base-font-size: 1em;
 $base-line-height: $base-font-size * 1.6;
 $base-font-weight: 400;
 
-$sans-serif: "proxima-nova", sans-serif;
+$sans-serif: "Open Sans", sans-serif;
 $serif: $georgia;
 
 $base-font-family: $sans-serif;

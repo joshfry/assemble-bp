@@ -2,35 +2,4 @@
 // Author
 // -------------------------------------------------------------------
 
-@import "site-nav";
-
-.site-header,
-.site-footer {
-  padding: 1em 0;
-}
-
-.site-main {
-  padding: 2.5em 0;
-}
-
-.site-footer {
-  border-top: 1px solid #ccc;
-
-  .copyright, .badge {
-    text-align: center;
-  }
-
-  @include media(30em) {
-    .content {
-      @include clearfix;
-      font-size: .9em;
-    }
-    .copyright, .badge {
-      margin: 0;
-      float: left;
-    }
-    .badge {
-      float: right;
-    }
-  }
-}
+@import "demo";

@@ -1,0 +1,50 @@
+// -------------------------------------------------------------------
+// Lists
+// -------------------------------------------------------------------
+
+// Reset ul styles
+// -------------------------------------------------------------------
+
+@mixin ul-reset {
+  margin: {
+    top: 0;
+    right: 0;
+    left: 0;
+  };
+  padding: 0;
+  list-style-type: none;
+}
+
+.ul-reset {
+  @include ul-reset;
+}
+
+// List of links
+// Allows <a>'s inside of <li>'s to be larger touch targets
+// -------------------------------------------------------------------
+
+@mixin list-of-links {
+  @include ul-reset;
+
+  li {
+    margin: 0;
+    padding: 0;
+    a {
+      display: block;
+    }
+  }
+}
+
+@mixin list-of-links-horiz {
+  @include list-of-links;
+
+  li {
+    margin-right: $unit;
+    &, a {
+      display: inline-block;
+    }
+  }
+}
+
+.list-of-links { @include list-of-links; }
+.list-of-links-horiz { @include list-of-links-horiz; }

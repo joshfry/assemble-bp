@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 
     bower: grunt.file.readJSON('.bowerrc'),
     pkg: grunt.file.readJSON('package.json'),
-    site: grunt.file.readYAML('src/templates/data/site.yml'),
+    site: grunt.file.readYAML('src/assemble/data/site.yml'),
 
     connect: {
       options: {
@@ -159,7 +159,7 @@ module.exports = function(grunt) {
           {
             expand: true,
             flatten: true,
-            src: ['<%= site.bower %>/mfglabs-iconset/css/font/*'],
+            src: ['<%= site.bower %>/<%= site.iconFont %>/*'],
             dest: '<%= site.dev %>/<%= site.assets %>/css/font'
           }
         ]
