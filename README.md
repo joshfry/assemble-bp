@@ -10,7 +10,6 @@ A front-end tool for generating static sites with [Grunt](http://gruntjs.com/), 
     - [Rake](http://rake.rubyforge.org) `gem install rake`
 - [Node](http://nodejs.org) OSX `v0.10.24`
 - [NPM](https://www.npmjs.org/) `v1.3.11`
-- 
 
 **Ubuntu Users**
 - [http://ariejan.net/2011/10/24/installing-node-js-and-npm-on-ubuntu-debian/](http://ariejan.net/2011/10/24/installing-node-js-and-npm-on-ubuntu-debian/)
