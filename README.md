@@ -8,8 +8,13 @@ A front-end tool for generating static sites with [Grunt](http://gruntjs.com/), 
 
 - [Ruby](https://www.ruby-lang.org/en) - Install with [rbenv](https://github.com/sstephenson/rbenv)
     - [Rake](http://rake.rubyforge.org) `gem install rake`
-- [Node](http://nodejs.org) OSX `v0.10.24` [Ubuntu users]([http://ariejan.net/2011/10/24/installing-node-js-and-npm-on-ubuntu-debian/](http://ariejan.net/2011/10/24/installing-node-js-and-npm-on-ubuntu-debian/))
+- [Node](http://nodejs.org) OSX `v0.10.24`
 - [NPM](https://www.npmjs.org/) `v1.3.11`
+- 
+
+**Ubuntu Users**
+- [http://ariejan.net/2011/10/24/installing-node-js-and-npm-on-ubuntu-debian/](http://ariejan.net/2011/10/24/installing-node-js-and-npm-on-ubuntu-debian/)
+- [https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#wiki-ubuntu-mint-elementary-os](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#wiki-ubuntu-mint-elementary-os)
 
 #### One-time Setup
 
