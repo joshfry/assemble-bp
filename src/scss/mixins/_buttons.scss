@@ -119,8 +119,10 @@ $button-disabled-opacity: .5;
     &:hover,
     &:active,
     &.is-active {
-      color: $button-hover-text-color;
-      background: $button-background-color;
+      // color: $button-hover-text-color;
+      // background: $button-background-color;
+      border-color: $button-hover-background-color;
+      color: $button-hover-background-color;
     }
   }
 }

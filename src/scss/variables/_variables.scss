@@ -45,6 +45,7 @@ $light-gray: #ddd;
 $gray: #ccc;
 $dark-gray: #999;
 $white-smoke: #eee;
+$light-smoke: #f5f5f5;
 $white: #fff;
 
 $red: #e74c3c;
@@ -52,7 +53,7 @@ $green: #2ecc71;
 $yellow: #f1c40f;
 
 // Body Background Color
-$base-background-color: $white-smoke;
+$base-background-color: $white;
 
 // Selection Color
 $selection-color: #FF69B4;
@@ -86,8 +87,12 @@ $header-font-color: #333;
 $base-link-color: $base-accent-color;
 $hover-link-color: $tertiary;
 
-// Border color
+// Borders
+$base-border-width: em(10);
+$base-border-style: solid;
 $base-border-color: $light-gray;
+// All base border vars in one
+$base-border: $base-border-width $base-border-style $base-border-color;
 
 // Flash Colors
 $error-color: lighten($red,25%);

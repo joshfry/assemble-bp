@@ -5,17 +5,18 @@
 $form-border-color: $base-border-color;
 $form-border-color-hover: darken($base-border-color, 10);
 $form-border-color-focus: $base-accent-color;
-$form-border-radius: $base-border-radius;
 $form-box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
 $form-font-size: $base-font-size;
 $form-font-family: $base-font-family;
 
 fieldset {
-  background: lighten($base-border-color, 10);
-  border: 1px solid $base-border-color;
-  margin: 0 0 ($base-line-height / 2) 0;
-  padding: $base-line-height;
+  @include rounded-corners;
+  @include module;
+  @include margin;
+  padding: $base-padding;
+  background: $light-smoke;
+  border: 1px solid darken($light-smoke, 10);
 }
 
 input,
@@ -27,8 +28,11 @@ select {
 }
 
 label {
+  @include font-smoothing;
   font-weight: bold;
-  margin-bottom: $base-line-height / 4;
+  font-size: em(14);
+  line-height: 1.4;
+  margin-bottom: $base-line-height/3;
 
   &.required:after {
     content: "*";
@@ -43,13 +47,13 @@ textarea,
 #{$all-text-inputs} {
   @include box-sizing(border-box);
   @include transition(border-color);
+  @include rounded-corners;
+  @include margin;
   background-color: white;
-  border-radius: $form-border-radius;
   border: 1px solid $form-border-color;
   box-shadow: $form-box-shadow;
   font-family: $form-font-family;
   font-size: $form-font-size;
-  margin-bottom: $base-line-height / 2;
   padding: ($base-line-height / 3) ($base-line-height / 3);
   width: 100%;
 
@@ -78,9 +82,10 @@ select {
   margin-bottom: $base-line-height;
 }
 
-button,
+// button,
 button.button,
-input[type="submit"] {
+input[type="submit"],
+input[type="reset"] {
   @include appearance(none);
   @include button;
   font-size: $base-font-size;

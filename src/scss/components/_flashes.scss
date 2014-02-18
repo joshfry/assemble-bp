@@ -6,7 +6,9 @@
 %flash {
   @include rounded-corners;
   @include margin;
-  padding: $base-padding/3 $base-padding/1.5;
+  padding: $base-padding/2 $base-padding/1.5;
+  font-size: 90%;
+  line-height: 1.4;
 }
 
 .error, #flash_failure {
@@ -15,10 +17,11 @@
   color: darken($error-color, 60);
 
   a {
-    color: darken($error-color, 70);
+    color: darken($error-color, 25);
+    border-bottom: 1px dashed darken($error-color, 25);
 
     &:hover {
-      color: darken($error-color, 90);
+      color: darken($error-color, 40);
     }
   }
 }
@@ -29,10 +32,11 @@
   color: darken($notice-color, 60);
 
   a {
-    color: darken($notice-color, 70);
+    color: darken($notice-color, 35);
+    border-bottom: 1px dashed darken($notice-color, 35);
 
     &:hover {
-      color: darken($notice-color, 90);
+      color: darken($notice-color, 45);
     }
   }
 }
@@ -44,10 +48,11 @@
   color: darken($success-color, 60);
 
   a {
-    color: darken($success-color, 70);
+    color: darken($success-color, 35);
+    border-bottom: 1px dashed darken($success-color, 35);
 
     &:hover {
-      color: darken($success-color, 90);
+      color: darken($success-color, 45);
     }
   }
 }

@@ -1,10 +1,33 @@
 // ------------------------------------------------------------
 // Mobile Menu
-   console.log('%c✔ Mobile Menu', 'color: #27ae60');
 // ------------------------------------------------------------
 
-var $MenuTrigger = $('.mobile-menu');
+printTitle('mobile-menu.js');
 
-$MenuTrigger.click(function(){
-  $('body').toggleClass('menu-active');
-});
+(function ($) {
+  $.fn.mobileMenu = function(options) {
+    options = $.extend({}, $.fn.mobileMenu.options, options);
+    return this.each(function() {
+
+      // mobileMenu vars
+      var elem = $(this),
+
+          // Set default options
+          toggleElem = options.toggleElem,
+          toggleClass = options.toggleClass;
+
+      // mobileMenu code
+      elem.click(function(){
+        $(toggleElem).toggleClass(toggleClass);
+      });
+
+    });
+  };
+
+  // mobileMenu default options
+  $.fn.mobileMenu.options = {
+    toggleElem: 'body',
+    toggleClass: 'menu-active'
+  };
+
+})(jQuery);

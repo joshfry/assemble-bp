@@ -73,7 +73,7 @@ module.exports = function(grunt) {
 
     concat: {
       components: {
-        src: ['src/js/components/*.js'],
+        src: ['src/js/components/helpers.js', 'src/js/components/*.js'],
         dest: '<%= site.dev %>/<%= site.assets %>/js/components.cat.js',
         options: {
           banner: '/*! \n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/ \n\n',
@@ -120,10 +120,52 @@ module.exports = function(grunt) {
       html: ['<%= site.dev %>/**/*.{html,md}', '!<%= site.bower %>/**/*.{html,md}'],
       css: ['<%= site.dev %>/<%= site.assets %>/css'],
       js: ['<%= site.dev %>/<%= site.assets %>/js'],
-      img: ['<%= site.dev %>/<%= site.assets %>/img']
+      img: ['<%= site.dev %>/<%= site.assets %>/img'],
+      templates: ['<%= site.dev %>/head.hbs', '<%= site.dev %>/scripts.hbs', '<%= site.dev %>/styles.hbs'],
+      templatesTmp: ['<%= site.assemble %>/_tmp']
     },
 
     copy: {
+      templates: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/assemble/partials',
+            src: ['head.hbs','scripts.hbs','styles.hbs'],
+            dest: '<%= site.dev %>'
+          }
+        ]
+      },
+      templatesSave: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/assemble/partials',
+            src: ['head.hbs','scripts.hbs','styles.hbs'],
+            dest: '<%= site.assemble %>/_tmp'
+          }
+        ]
+      },
+      templatesRev: {
+        files: [
+          {
+            expand: true,
+            cwd: '<%= site.dev %>',
+            src: ['head.hbs','scripts.hbs','styles.hbs'],
+            dest: 'src/assemble/partials'
+          }
+        ]
+      },
+      templatesPutBack: {
+        files: [
+          {
+            expand: true,
+            cwd: '<%= site.assemble %>/_tmp',
+            src: ['head.hbs','scripts.hbs','styles.hbs'],
+            dest: 'src/assemble/partials'
+          }
+        ]
+      },
       bower: {
         files: [
           {
@@ -164,12 +206,22 @@ module.exports = function(grunt) {
           }
         ]
       },
-      prod: {
+      prodHtml: {
         files: [
           {
             expand: true,
             cwd: '<%= site.dev %>',
-            src: ['**', '!assets/bower/**'],
+            src: ['**', '!assets/**'],
+            dest: '<%= site.prod %>'
+          }
+        ]
+      },
+      prodAssets: {
+        files: [
+          {
+            expand: true,
+            cwd: '<%= site.dev %>',
+            src: ['assets/img/**', 'assets/css/font/**', 'assets/js/modernizr.min.js', 'assets/js/scripts.min.js', 'assets/css/style.min.css'],
             dest: '<%= site.prod %>'
           }
         ]
@@ -197,11 +249,21 @@ module.exports = function(grunt) {
     //   }
     // },
 
+    // useminPrepare: {
+    //   html: ['<%= site.dev %>/**/*.html', '!<%= site.bower %>/**/*.html'],
+    // },
+    // usemin: {
+    //   html: ['<%= site.dev %>/**/*.html', '!<%= site.bower %>/**/*.html'],
+    //   options: {
+    //     dirs: ['<%= site.dev %>/']
+    //   }
+    // },
+
     useminPrepare: {
-      html: ['<%= site.dev %>/**/*.html', '!<%= site.bower %>/**/*.html'],
+      html: ['<%= site.dev %>/*.hbs'],
     },
     usemin: {
-      html: ['<%= site.dev %>/**/*.html', '!<%= site.bower %>/**/*.html'],
+      html: ['<%= site.dev %>/*.hbs'],
       options: {
         dirs: ['<%= site.dev %>/']
       }
@@ -233,7 +295,7 @@ module.exports = function(grunt) {
 
   // Main tasks
   grunt.registerTask('dev',     ['default', 'w']);
-  grunt.registerTask('build',   ['default', 'prod']);
+  grunt.registerTask('build',   ['prod']);
 
   // Watch tasks
   grunt.registerTask('w',       ['connect:server', 'watch']);
@@ -249,7 +311,7 @@ module.exports = function(grunt) {
   grunt.registerTask('img',     ['copy:img']);
 
   // Compile tasks (prod)
-  grunt.registerTask('prod',    [/*'imagemin', */'copy:iconfont', 'useminPrepare', 'concat', 'cssmin', 'uglify', 'usemin', 'devcode', 'copy:prod', 'clean:dist']);
+  grunt.registerTask('prod',    [/*'imagemin', */'assets', 'copy:iconfont', 'copy:templates', 'copy:templatesSave', 'useminPrepare', 'concat', 'cssmin', 'uglify', 'usemin', 'copy:templatesRev', 'assemble', 'devcode', 'clean:templates', 'copy:prodHtml', 'copy:prodAssets', 'copy:templatesPutBack', 'clean:templatesTmp', 'clean:dist']);
   // Plugins
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   grunt.loadNpmTasks('assemble');

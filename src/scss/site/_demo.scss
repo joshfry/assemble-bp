@@ -2,13 +2,22 @@
 // Demo styles
 // ------------------------------------------------------------
 
+// Mobile nav breakpoint
+$sitenav-breakpoint: 30em;
+
+// ------------------------------------------------------------
+
 .site-header,
 .site-footer {
-  padding: 1em 0;
+  padding: $unit 0;
 }
 
 .site-main {
-  padding: 2.5em 0;
+  padding: $unit 0;
+
+  @include media($sitenav-breakpoint) {
+    padding: $unit*2.5 0;
+  }
 }
 
 .site-footer {
@@ -18,7 +27,7 @@
     text-align: center;
   }
 
-  @include media(30em) {
+  @include media($sitenav-breakpoint) {
     .content {
       @include clearfix;
       font-size: .9em;
@@ -37,16 +46,13 @@
 // Site Nav
 // ------------------------------------------------------------
 
-// Mobile nav breakpoint
-$mobile-nav-breakpoint: 30em;
-
 .site-nav {
   @include clearfix;
 
   .navbar-brand {
     display: block;
 
-    @include media($mobile-nav-breakpoint) {
+    @include media($sitenav-breakpoint) {
       margin-right: $unit;
       float: left;
     }
@@ -62,13 +68,13 @@ $mobile-nav-breakpoint: 30em;
     height: 0;
     overflow: hidden;
 
-    @include media($mobile-nav-breakpoint) {
+    @include media($sitenav-breakpoint) {
       height: auto;
       overflow: auto;
     }
 
     a {
-      @include media($mobile-nav-breakpoint) {
+      @include media($sitenav-breakpoint) {
         display: block;
         float: left;
         line-height: 0;
@@ -78,7 +84,7 @@ $mobile-nav-breakpoint: 30em;
     }
 
     .nav-right {
-      @include media($mobile-nav-breakpoint) {
+      @include media($sitenav-breakpoint) {
         float: right;
         padding-right: 0;
       }
@@ -99,7 +105,7 @@ $mobile-nav-breakpoint: 30em;
   text-align: center;
   color: $primary;
 
-  @include media($mobile-nav-breakpoint) {
+  @include media($sitenav-breakpoint) {
     display: none;
   }
 
@@ -122,7 +128,7 @@ $mobile-nav-breakpoint: 30em;
   .nav-links {
     height: auto;
     overflow: auto;
-    padding: $unit/2 0;
+    padding: $unit 0 0;
 
     a {
       display: block;

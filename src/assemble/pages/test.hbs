@@ -6,15 +6,9 @@ bodyClass: test-page
 ---
 
 {{#markdown}}
+<p class="intro">Learn more about assemble at http://assemble.io</p>
 
-> This page is written in Markdown
-
-- If assemble permalinks are working, this URL should be http://localhost:8000/test
-- Learn more about assemble at http://assemble.io
-
----
-
-## Code Blocks
+<h2 class="section-title">Code Blocks</h2>
 
 `scss`
 ```scss
@@ -36,9 +30,7 @@ console.log('hi');
 $ grunt dev
 ```
 
----
-
-## Paragraphs
+<h2 class="section-title">Paragraphs</h2>
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
@@ -46,7 +38,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
----
+<h2 class="section-title">Headings</h2>
 
 # Heading Level 1
 ## Heading Level 2
@@ -55,9 +47,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 ##### Heading Level 5
 ###### Heading Level 6
 
----
-
-## Form Elements
+<h2 class="section-title">Form Elements</h2>
 
 A nice resource for all HTML5 input types http://nativeformelements.com
 
@@ -86,9 +76,10 @@ A nice resource for all HTML5 input types http://nativeformelements.com
   </fieldset>
 
   <input type="submit">
+  <input type="reset" class="alt">
 </form>
 
-<hr>
+<hr class="alt">
 
 <p class="notice">The following is taken from <a href="http://bitters.bourbon.io/example.html" target="_blank">http://bitters.bourbon.io/example.html</a></p>
 
@@ -109,20 +100,10 @@ A nice resource for all HTML5 input types http://nativeformelements.com
   </tr>
 </table>
 
-<hr />
-
-<h2 id="misc">Misc Stuff - abbr, acronym, pre, code, sub, sup, etc.</h2>
-
-<p>Lorem <sup>superscript</sup> dolor <sub>subscript</sub> amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <cite>cite</cite>. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p>
-
-<pre><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p></pre>
-
 <blockquote>
-  <p> This stylesheet is going to help so freaking much.</p>
+  <p> This stylesheet is going to help so much.</p>
   <cite>Blockquote</cite>
 </blockquote>
-
-<hr />
 
 <h2 id="flashes">Flash / error messages</h2>
 <div class="success">
