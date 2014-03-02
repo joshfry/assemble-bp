@@ -11,10 +11,10 @@ $container-super-narrow    : 45em; // 720px
 
 @mixin container {
   @include outer-container;
-  padding-left: $base-padding;
-  padding-right: $base-padding;
+  padding-left: $base_line_height;
+  padding-right: $base_line_height;
 
-  @include media($container+$base-padding*2) {
+  @include media($container+$base_line_height*2) {
     padding-left: 0;
     padding-right: 0;
   }
@@ -28,8 +28,8 @@ $container-super-narrow    : 45em; // 720px
   padding-right: 7.5%;
 
   @include media($max-width) {
-    padding-left: $base-padding;
-    padding-right: $base-padding;
+    padding-left: $base_line_height;
+    padding-right: $base_line_height;
   }
 }
 
@@ -56,17 +56,15 @@ $container-super-narrow    : 45em; // 720px
 // Let the container span edge-to-edge.
 // -------------------------------------------------------------------
 
-@mixin full-bleed {
-  padding-left: 0;
-  padding-right: 0;
+@mixin fullbleed($gutter: 3em) {
+  max-width: none;
+  width: -webkit-calc(100% + #{$gutter});
+  width: calc(100% + #{$gutter});
+  margin-left: -($gutter/2)!important;
 }
-// Apply .full-bleed to a section: targets direct .container child
-.full-bleed {
-  > .container {
-    @include full-bleed;
+
+.fullbleed {
+  @include media($container-mobile_only) {
+    @include fullbleed;
   }
-}
-// ... or apply it directly to a container
-.full-bleed {
-  @include full-bleed;
 }

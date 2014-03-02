@@ -27,7 +27,7 @@
 // Hero
 
 .hero {
-  @include margin;
+  margin: 0 0 $base_line_height;
   @extend %hero-img;
 }
 

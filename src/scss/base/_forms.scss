@@ -12,8 +12,8 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color
 
 fieldset {
   @include module;
-  @include margin;
-  padding: $base-padding/1.5;
+  margin: 0 0 $base_line_height;
+  padding: $base_line_height / 1.5;
   background: $light-smoke;
   border: 1px solid darken($light-smoke, 10);
 }
@@ -43,7 +43,7 @@ textarea,
 #{$all-text-inputs} {
   @include box-sizing(border-box);
   @include transition(border-color);
-  @include margin;
+  margin: 0 0 $base_line_height;
   background-color: white;
   border: 1px solid $form-border-color;
   box-shadow: $form-box-shadow;

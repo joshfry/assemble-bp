@@ -7,12 +7,7 @@ h1, h2, h3, h4, h5, h6,
   @include proxima_nova_regular;
   font-size: em(24);
   line-height: 1.25;
-  margin: {
-    top: $base-margin-px*1.5875;
-    top: $base-margin-rem*1.5875;
-    bottom: $base-margin-px;
-    bottom: $base-margin-rem;
-  }
+  margin: em(32, 24) 0 em(24,24);
   color: $header-font-color;
 }
 h4, .h4 {
@@ -30,7 +25,7 @@ h6, .h6 {
 }
 
 p {
-  @include margin;
+  margin: 0 0 $base_line_height;
 }
 
 // Classes
@@ -43,18 +38,18 @@ p {
 }
 
 .page-title {
-  margin: 0 0 $base-margin-px/2;
-  margin: 0 0 $base-margin-rem/2;
-  font-size: 2.5em;
+  margin: 0 0 em(12, 56);
+  font-size: em(40);
   line-height: 1;
   font-weight: 300;
 
   @include media(45em) {
-    font-size: 3.5em;
+    font-size: em(56);
   }
 }
 
 .intro {
+  margin-bottom: em(24, 20);
   font-size: em(20);
   line-height: 1.5;
   color: $dark-gray;
@@ -79,6 +74,7 @@ p {
     code, pre,
     td, th {
       font-size: em(14);
+      line-height: 1.5;
     }
     blockquote p {
       font-size: em(24);

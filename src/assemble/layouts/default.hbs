@@ -9,13 +9,19 @@ layout: base.hbs
 </head>
 <body {{#if bodyClass}}class="{{bodyClass}}"{{/if}}>
   <header class="site-header" role="banner">
-    {{> header }}
+    <div class="container">
+      {{> header }}
+    </div>
   </header>
   <main class="site-main" role="main">
-    {{> body }}
+    <div class="container">
+      {{> body }}
+    </div>
   </main>
   <footer class="site-footer" role="contentinfo">
-    {{> footer }}
+    <div class="container">
+      {{> footer }}
+    </div>
   </footer>
   {{> scripts }}
 </body>

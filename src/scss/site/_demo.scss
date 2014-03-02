@@ -16,18 +16,21 @@
 }
 
 .site-footer {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid $bb-color;
+
+  .container {
+    @include clearfix;
+    @include module;
+  }
 
   .copyright, .badge {
     text-align: center;
   }
 
   @include media($sitenav-breakpoint) {
-    .content {
-      @include clearfix;
-      font-size: .9em;
-    }
+
     .copyright, .badge {
+      font-size: .9em;
       margin: 0;
       float: left;
     }

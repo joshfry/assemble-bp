@@ -33,8 +33,8 @@ $button-disabled-opacity: .5;
   @include trailing-hovers;
   @include button-reset;
   @include rounded-corners;
-  @include margin;
 
+  margin: 0 0 $base_line_height;
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -44,8 +44,7 @@ $button-disabled-opacity: .5;
 
   @include media(30em) {
     width: auto;
-    margin: 0 $base-margin-px/2 $base-margin-px 0;
-    margin: 0 $base-margin-rem/2 $base-margin-rem 0;
+    margin: 0 $base_line_height/2 $base_line_height 0;
   }
 
   font-size: $base-button-font-size;

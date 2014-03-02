@@ -6,7 +6,7 @@ $show_media_queries : true;
 $show_baseline_grid : false;
 
 $base_font_size: 1em;
-$base_line_height: 1.5;
+$base_line_height: $base_font_size * 1.5;
 
 $unit: $base_font_size;
 $gutter_spacing: flex-gutter($parent-columns);

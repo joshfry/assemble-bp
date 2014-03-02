@@ -4,8 +4,8 @@
 
 code,
 pre {
-  @include margin;
   @include rounded-corners;
+  margin: 0 0 $base_line_height;
   font-family: Menlo, Monaco, 'Andale Mono', 'lucida console', 'Courier New', monospace;
   font-size: em(14);
   line-height: 1.4;

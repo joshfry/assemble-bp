@@ -11,8 +11,8 @@ $success-color: lighten($green,25%);
 /* Success, error & notice boxes for messages and errors. */
 %flash {
   @include rounded-corners;
-  @include margin;
-  padding: $base-padding/2 $base-padding/1.5;
+  margin: 0 0 $base_line_height;
+  padding: $base_line_height / 2 $base_line_height / 1.5;
   font-size: 90%;
   line-height: 1.4;
 }

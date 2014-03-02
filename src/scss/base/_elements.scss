@@ -10,6 +10,7 @@ img {
   // Remove space below img
   &.img {
     display: block;
+    margin: 0 0 $base_line_height;
   }
 }
 
@@ -18,12 +19,7 @@ hr {
   border-left: none;
   border-right: none;
   border-top: none;
-  margin: {
-    top: $base-margin-px*1.5875;
-    top: $base-margin-rem*1.5875;
-    bottom: $base-margin-px*1.5875;
-    bottom: $base-margin-rem*1.5875;
-  }
+  margin: em(32, 24) 0;
 }
 
 abbr, acronym {
@@ -32,12 +28,12 @@ abbr, acronym {
 }
 
 address {
-  @include margin;
+  margin: 0 0 $base_line_height;
   display: block;
 }
 
 hgroup {
-@include margin(2);
+  margin-bottom: $base_line_height / 2;
 }
 
 del {
@@ -45,17 +41,8 @@ del {
 }
 
 blockquote {
-  margin: {
-    left: 0;
-    right: 0;
-  }
-  margin: {
-    top: $base-margin-px*3;
-    top: $base-margin-rem*3;
-    bottom: $base-margin-px*3;
-    bottom: $base-margin-rem*3;
-  }
-  padding: $base-padding/1.25;
+  margin: $base_line_height * 2 0;
+  padding: $base_line_height $base_line_height / 1.5;
   padding-right: 0;
   color: $brand-blue;
   border-left: $base-border-width $base-border-style lighten($brand-blue, 45);
@@ -63,8 +50,7 @@ blockquote {
   p {
     font-size: em(24);
     line-height: 1.3;
-    margin-bottom: $base-margin-px/2;
-    margin-bottom: $base-margin-rem/2;
+    margin-bottom: $base_line_height / 2;
   }
 }
 
