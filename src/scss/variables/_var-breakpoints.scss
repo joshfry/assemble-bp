@@ -1,0 +1,25 @@
+// -------------------------------------------------------------------
+// Breakpoint Variables
+// -------------------------------------------------------------------
+
+// 1px
+// ===
+
+$one-pixel: 0.0625em; // Used for setting max-width mq's
+
+// Mobile only
+// ===========
+
+$mobile-only: max-width 30em;
+
+// site-nav
+// ========
+
+$sitenav-breakpoint: 30em;
+$sitenav-mobile_only: max-width $sitenav-breakpoint - $one-pixel;
+
+// img-flex
+// ========
+
+$imgflex-breakpoint: 35em;
+$imgflex-mobile_only: max-width $imgflex-breakpoint - $one-pixel;

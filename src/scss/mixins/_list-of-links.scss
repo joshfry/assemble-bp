@@ -24,7 +24,7 @@
 // -------------------------------------------------------------------
 
 @mixin list-of-links {
-  @include ul-reset;
+  @extend .ul-reset;
 
   li {
     margin: 0;
@@ -36,7 +36,7 @@
 }
 
 @mixin list-of-links-horiz {
-  @include list-of-links;
+  @extend .list-of-links;
 
   li {
     margin-right: $unit;

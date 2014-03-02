@@ -1,0 +1,19 @@
+// -------------------------------------------------------------------
+// Border Variables
+// -------------------------------------------------------------------
+
+$base_border_radius: em(4);
+
+// Borders
+// =======
+
+$base_border_width: em(10);
+$base_border_style: solid;
+$base_border_color: $light_gray;
+
+// Border Aliases
+// ==============
+
+$bb_width: $base_border_width;
+$bb_style: $base_border_style;
+$bb_color: $base_border_color;

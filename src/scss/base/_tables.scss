@@ -2,23 +2,180 @@
 // Tables
 // -------------------------------------------------------------------
 
+$table-border_width:                 1px;
+$table-cell_padding:                 $unit/1.5;
+
+$table-theme:                        $gray;
+$table-cell_color:                   lighten($table-theme,100);
+$table-heading_bg_color:             lighten($table-theme,10);
+$table-zebra_shading_color:          lighten($table-theme,17);
+$table-bg_color:                     lighten($table-theme,17);
+$table-border_color:                 lighten($table-theme,5);
+$table-shadow:                       lighten($table-theme,17);
+
+// -------------------------------------------------------------------
+
 table {
-  margin: ($base-line-height / 2) 0;
-  width: 100%;
-}
-
-th {
-  border-bottom: 1px solid darken($base-border-color, 15%);
-  font-weight: bold;
-  padding: ($base-line-height / 2) 0;
+  @include margin;
+  position: relative;
+  font-size: em(14);
+  line-height: 1.5;
   text-align: left;
+  border-collapse: collapse;
+  border: {
+    left: $table-border_width $base-border-style $table-border_color;
+    right: $table-border_width $base-border-style $table-border_color;
+    bottom: $table-border_width $base-border-style $table-border_color;
+  }
+  background: $table-bg_color;
+  box-shadow: 0 0 0 $base-border-width/2 $table-shadow;
+
+  @include media(max-width 45em - $one-pixel) {
+    box-shadow: none;
+  }
 }
 
-td {
-  border-bottom: 1px solid $base-border-color;
-  padding: ($base-line-height / 2) 0;
+tr {
+  background: $table-cell_color;
+
+  &:nth-child(even) {
+    background: $table-zebra_shading_color;
+  }
+
+  td[rowspan] {
+    background: $table-cell_color;
+    font-weight: bold;
+  }
 }
 
 tr, td, th {
   vertical-align: middle;
+}
+
+td, th {
+  padding: $table-cell_padding;
+  border-top: $table-border_width $base-border-style $table-border_color;
+}
+
+th {
+  font-weight: bold;
+  background: $table-heading_bg_color;
+}
+
+// -------------------------------------------------------------------
+// Responsive Tables
+// -------------------------------------------------------------------
+
+$gradient-start-color: rgba(0,0,0,.15);
+$gradient-end-color: rgba(255,255,255,0);
+
+@mixin table-gradient {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: $unit;
+  height: 100%;
+  pointer-events: none;
+}
+@mixin table-gradient-left {
+  @include table-gradient;
+  background: -moz-linear-gradient(left, $gradient-start-color 0%, $gradient-start-color 10%, $gradient-end-color 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,$gradient-start-color), color-stop(10%,$gradient-start-color), color-stop(100%,$gradient-end-color));
+  background: -webkit-linear-gradient(left, $gradient-start-color 0%,$gradient-start-color 10%,$gradient-end-color 100%);
+  background: -o-linear-gradient(left, $gradient-start-color 0%,$gradient-start-color 10%,$gradient-end-color 100%);
+  background: -ms-linear-gradient(left, $gradient-start-color 0%,$gradient-start-color 10%,$gradient-end-color 100%);
+  background: linear-gradient(to right, $gradient-start-color 0%,$gradient-start-color 10%,$gradient-end-color 100%);
+}
+@mixin table-gradient-right {
+  @include table-gradient;
+  background: -moz-linear-gradient(left, $gradient-end-color 0%, $gradient-start-color 90%, $gradient-start-color 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,$gradient-end-color), color-stop(90%,$gradient-start-color), color-stop(100%,$gradient-start-color));
+  background: -webkit-linear-gradient(left, $gradient-end-color 0%,$gradient-start-color 90%,$gradient-start-color 100%);
+  background: -o-linear-gradient(left, $gradient-end-color 0%,$gradient-start-color 90%,$gradient-start-color 100%);
+  background: -ms-linear-gradient(left, $gradient-end-color 0%,$gradient-start-color 90%,$gradient-start-color 100%);
+  background: linear-gradient(to right, $gradient-end-color 0%,$gradient-start-color 90%,$gradient-start-color 100%);
+}
+
+table.rwd {
+  -webkit-overflow-scrolling: touch;
+
+  @include media(max-width 45em - $one-pixel) {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+
+    // Gradients
+    &:before { @include table-gradient-left; left: 0; }
+    &:after { @include table-gradient-right; right: 0; }
+
+    thead, tbody, th, tr, td {
+      display: block;
+    }
+
+    thead {
+      position: relative;
+      float: left;
+      white-space: nowrap;
+      max-width: 40%;
+      z-index: 2;
+
+      tr {
+        width: 100%;
+      }
+
+      // Gradient
+      &:after {
+        @include table-gradient-left;
+        left: 100%;
+      }
+    }
+    tbody {
+      overflow-x: auto;
+      overflow-y: hidden;
+      position: relative;
+      white-space: nowrap;
+    }
+
+    th {
+      text-align: right;
+    }
+
+    tr {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: -3px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+      &:first-child,
+      &:last-child td,
+      &:last-child th {
+        position: relative;
+        z-index: 3;
+      }
+    }
+  }
+}
+
+// -------------------------------------------------------------------
+// Responsive Complex Table
+// -------------------------------------------------------------------
+
+.table {
+  @include media(max-width 45em - $one-pixel) {
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    table {
+      width: 150%;
+
+      &.pricing_table {
+        width: 720px;
+      }
+    }
+  }
 }

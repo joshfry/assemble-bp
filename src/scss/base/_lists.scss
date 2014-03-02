@@ -7,13 +7,16 @@ ul, ol {
   padding-left: $base-padding;
 }
 
+// Nested lists
+// ============
+
 ul ul, ul ul ul,
 ol ol, ol ol ol {
   margin-bottom: 0;
 }
 
-// <ul>'s within <nav>'s
-// -------------------------------------------------------------------
+// nav > ul
+// ========
 
 nav {
   ul {
@@ -33,11 +36,11 @@ nav {
 }
 
 // Definition lists
-// -------------------------------------------------------------------
+// ================
 
 dl {
+  @include margin;
   line-height: $base-line-height;
-  margin-bottom: $base-line-height / 2;
 
   dt {
     font-weight: bold;
@@ -45,6 +48,6 @@ dl {
   }
 
   dd {
-    margin: 0;
+    @include margin(2);
   }
 }

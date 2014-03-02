@@ -15,3 +15,6 @@ assemble: src/assemble
 
 # Site info
 name: Boilerplate
+
+# Typekit ID
+typekit: xxxxxxx

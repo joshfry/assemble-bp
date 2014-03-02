@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "dependencies": {
     "jquery": "2.1.0",
+    "fastclick": "https://github.com/ftlabs/fastclick.git#~0.6.11",
     "mfglabs-iconset": "https://github.com/MfgLabs/mfglabs-iconset.git",
     "bourbon": "https://github.com/thoughtbot/bourbon.git#3.1.8",
     "neat": "https://github.com/thoughtbot/neat.git#1.4.0"

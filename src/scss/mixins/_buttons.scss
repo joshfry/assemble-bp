@@ -2,32 +2,6 @@
 // Buttons
 // -------------------------------------------------------------------
 
-/*
-
-  ## Button
-  <a class="btn">Button</a>
-  <a class="btn is-active">Button</a>
-  <a class="btn is-disabled">Button</a>
-
-  ## Button Large
-  <a class="btn lrg">Button</a>
-  <a class="btn lrg is-active">Button</a>
-  <a class="btn lrg is-disabled">Button</a>
-
-  ## Button Alt
-  <a class="btn alt">Button</a>
-  <a class="btn alt is-active">Button</a>
-  <a class="btn alt is-disabled">Button</a>
-
-  ## Button Alt Large
-  <a class="btn alt lrg">Button</a>
-  <a class="btn alt lrg is-active">Button</a>
-  <a class="btn alt lrg is-disabled">Button</a>
-
-*/
-
-// -------------------------------------------------------------------
-
 $base-button-font-size: $base-font-size;
 $base-button-large-font-size: $base-font-size * 1.375;
 
@@ -55,7 +29,7 @@ $button-disabled-opacity: .5;
 
 }
 
-@mixin button($button-background-color: $primary, $button-text-color: $white, $button-hover-background-color: $primary-dark, $button-hover-text-color: $white) {
+@mixin button($button-background-color: $primary, $button-text-color: $white, $button-hover-background-color: darken($primary,15%), $button-hover-text-color: $white) {
   @include trailing-hovers;
   @include button-reset;
   @include rounded-corners;

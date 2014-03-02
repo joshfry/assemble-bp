@@ -1,0 +1,84 @@
+// -------------------------------------------------------------------
+// Elements
+// -------------------------------------------------------------------
+
+img {
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+
+  // Remove space below img
+  &.img {
+    display: block;
+  }
+}
+
+hr {
+  border-bottom: 1px solid $base-border-color;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: {
+    top: $base-margin-px*1.5875;
+    top: $base-margin-rem*1.5875;
+    bottom: $base-margin-px*1.5875;
+    bottom: $base-margin-rem*1.5875;
+  }
+}
+
+abbr, acronym {
+  border-bottom: 1px dotted $base-border-color;
+  cursor: help;
+}
+
+address {
+  @include margin;
+  display: block;
+}
+
+hgroup {
+@include margin(2);
+}
+
+del {
+  color: lighten($base-font-color, 15);
+}
+
+blockquote {
+  margin: {
+    left: 0;
+    right: 0;
+  }
+  margin: {
+    top: $base-margin-px*3;
+    top: $base-margin-rem*3;
+    bottom: $base-margin-px*3;
+    bottom: $base-margin-rem*3;
+  }
+  padding: $base-padding/1.25;
+  padding-right: 0;
+  color: $brand-blue;
+  border-left: $base-border-width $base-border-style lighten($brand-blue, 45);
+
+  p {
+    font-size: em(24);
+    line-height: 1.3;
+    margin-bottom: $base-margin-px/2;
+    margin-bottom: $base-margin-rem/2;
+  }
+}
+
+cite {
+  font-family: $georgia;
+  font-size: 90%;
+  font-style: italic;
+  color: $dark-gray;
+
+  &:before {
+    content: '\2014 \00A0';
+  }
+}
+
+iframe {
+  display: block;
+}

@@ -2,45 +2,60 @@
 // Code
 // -------------------------------------------------------------------
 
-// Inline
-// -------------------------------------------------------------------
+code,
+pre {
+  @include margin;
+  @include rounded-corners;
+  font-family: Menlo, Monaco, 'Andale Mono', 'lucida console', 'Courier New', monospace;
+  font-size: em(14);
+  line-height: 1.4;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+pre {
+  padding: .75em 1em;
+  background: $light-smoke;
+  border: 1px solid darken($light-smoke, 5);
+}
+
+/* Code blocks */
+code[class*="language-"],
+pre[class*="language-"] {
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  -moz-tab-size: 2;
+    -o-tab-size: 2;
+       tab-size: 2;
+  -webkit-hyphens: none;
+     -moz-hyphens: none;
+      -ms-hyphens: none;
+  hyphens: none;
+  border: none;
+  background: #002A35;
+}
+pre[class*="language-"] {
+  overflow: auto;
+}
+code[class*="language-"] {
+  color: white;
+}
+
+/* Inline code */
+:not(pre) > code,
+:not(pre) > code[class*="language-"] {
+  padding: 0 .5em;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: .75em;
+  line-height: 1.5;
+  background: $light-smoke;
+  border: 1px solid darken($light-smoke, 5);
+}
 
 p,li {
   code {
-    -webkit-font-smoothing: subpixel-antialiased;
-    border: 1px solid $gray;
-    padding: 0 .5em;
-    display: inline-block;
-    vertical-align: middle;
-    border-radius: .25em;
-    font-size: .75em;
-    line-height: 1.5;
-    background: #D4DDE7;
-    // max-width: 100%;
-    // overflow: scroll;
+    margin-bottom: 0;
   }
-}
-
-// Code blocks
-// -------------------------------------------------------------------
-
-pre {
-  -webkit-font-smoothing: subpixel-antialiased;
-  margin: $unit 0;
-  //
-  // !! for code blocks without a class !!
-  //
-  font-size: .9em;
-  padding: .5em 1em;
-  border: 1px solid $gray;
-  border-radius: 3px;
-}
-pre[class*=language-] {
-  -webkit-font-smoothing: subpixel-antialiased;
-  margin: $unit 0;
-  //
-  // !! for code blocks with a class !!
-  //
-  border: none;
-  border-radius: none;
 }

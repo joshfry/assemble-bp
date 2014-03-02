@@ -1,0 +1,72 @@
+// -------------------------------------------------------------------
+// Containers
+// -------------------------------------------------------------------
+
+$container                 : $max-width;
+$container-mobile_only     : max-width $max-width - $one-pixel;
+$container-narrow          : 60em; // 960px
+$container-super-narrow    : 45em; // 720px
+
+// -------------------------------------------------------------------
+
+@mixin container {
+  @include outer-container;
+  padding-left: $base-padding;
+  padding-right: $base-padding;
+
+  @include media($container+$base-padding*2) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// Thinner containers, in case design calls for it
+
+@mixin container--text {
+  @extend .container;
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+
+  @include media($max-width) {
+    padding-left: $base-padding;
+    padding-right: $base-padding;
+  }
+}
+
+@mixin container--narrow {
+  @extend .container;
+  max-width: $container-narrow;
+}
+@mixin container--super-narrow {
+  @extend .container;
+  max-width: $container-super-narrow;
+}
+
+// Class versions
+
+.container { @include container; }
+.container--text { @include container--text; }
+.container--narrow { @include container--narrow; }
+.container--super-narrow { @include container--super-narrow; }
+
+
+// -------------------------------------------------------------------
+// Full Bleed
+//
+// Let the container span edge-to-edge.
+// -------------------------------------------------------------------
+
+@mixin full-bleed {
+  padding-left: 0;
+  padding-right: 0;
+}
+// Apply .full-bleed to a section: targets direct .container child
+.full-bleed {
+  > .container {
+    @include full-bleed;
+  }
+}
+// ... or apply it directly to a container
+.full-bleed {
+  @include full-bleed;
+}

@@ -1,14 +1,43 @@
 {
-  "custom_data_single" : {
-    "custom" : "data"
+  "thing" : {
+    "key" : "value"
   },
 
-  "custom_data_array" : [
+  "array" : [
     {
-      "custom" : "data"
+      "key" : "value"
     },
     {
-      "custom" : "data"
+      "key" : "value"
+    }
+  ],
+
+  "nested_array" : [
+    {
+      "tom" : [
+        {
+          "fname" : "First",
+          "lname" : "Last",
+          "twitter" : "@twitter",
+          "url" : "http://"
+        }
+      ],
+      "dick" : [
+        {
+          "fname" : "First",
+          "lname" : "Last",
+          "twitter" : "@twitter",
+          "url" : "http://"
+        }
+      ],
+      "harry" : [
+        {
+          "fname" : "First",
+          "lname" : "Last",
+          "twitter" : "@twitter",
+          "url" : "http://"
+        }
+      ]
     }
   ]
 }

@@ -1,46 +1,25 @@
 // -------------------------------------------------------------------
-// Reset
+// Base
 // -------------------------------------------------------------------
-
-// Box sizing is handled with Bourbon
-// * {
-//   -webkit-box-sizing: border-box;
-//   -moz-box-sizing: border-box;
-//   box-sizing: border-box;
-// }
-
-@mixin font-smoothing {
-  -webkit-font-smoothing: antialiased;
-}
 
 html {
   font-size: 100%;
 }
 
 body {
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-  font-weight: $base-font-weight;
-  font-family: $base-font-family;
-  color: $base-font-color;
-  background-color: $base-background-color;
+  @include proxima_nova_regular;
+
+  font-size: $base_font_size;
+  line-height: $base_line_height;
+
+  color: $base_font_color;
+  background-color: $white;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: $selection-color;
+  background: $brand-blue;
   text-shadow: none;
-}
-
-a {
-  color: $base-link-color;
-  text-decoration: none;
-  outline: 0;
-
-  &:hover {
-    color: $hover-link-color;
-  }
-  &:active, &:focus {
-    color: $hover-link-color;
-    outline: none;
-  }
 }

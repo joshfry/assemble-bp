@@ -1,0 +1,39 @@
+// -------------------------------------------------------------------
+// Image Flex
+// -------------------------------------------------------------------
+
+// Hero Image
+%hero-img {
+  &, img {
+    display: block;
+  }
+}
+
+// Image Flex
+%img-flex {
+  overflow: hidden;
+
+  img {
+    max-width: 137.5%;
+    margin-left: -18.75%;
+
+    @include media($imgflex-breakpoint) {
+      max-width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+// Hero
+
+.hero {
+  @include margin;
+  @extend %hero-img;
+}
+
+// Hero Flex
+
+.img-flex {
+  @extend %hero-img;
+  @extend %img-flex;
+}

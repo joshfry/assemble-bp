@@ -2,19 +2,18 @@
 // Forms
 // -------------------------------------------------------------------
 
-$form-border-color: $base-border-color;
-$form-border-color-hover: darken($base-border-color, 10);
-$form-border-color-focus: $base-accent-color;
+$form-border-color: $bb-color;
+$form-border-color-hover: darken($bb-color, 10);
+$form-border-color-focus: $primary;
 $form-box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
-$form-font-size: $base-font-size;
-$form-font-family: $base-font-family;
+
+// -------------------------------------------------------------------
 
 fieldset {
-  @include rounded-corners;
   @include module;
   @include margin;
-  padding: $base-padding;
+  padding: $base-padding/1.5;
   background: $light-smoke;
   border: 1px solid darken($light-smoke, 10);
 }
@@ -23,16 +22,13 @@ input,
 label,
 select {
   display: block;
-  font-family: $form-font-family;
-  font-size: $form-font-size;
 }
 
 label {
-  @include font-smoothing;
   font-weight: bold;
   font-size: em(14);
   line-height: 1.4;
-  margin-bottom: $base-line-height/3;
+  margin-bottom: $unit / 2;
 
   &.required:after {
     content: "*";
@@ -47,14 +43,11 @@ textarea,
 #{$all-text-inputs} {
   @include box-sizing(border-box);
   @include transition(border-color);
-  @include rounded-corners;
   @include margin;
   background-color: white;
   border: 1px solid $form-border-color;
   box-shadow: $form-box-shadow;
-  font-family: $form-font-family;
-  font-size: $form-font-size;
-  padding: ($base-line-height / 3) ($base-line-height / 3);
+  padding: ($unit / 2) ($unit / 2);
   width: 100%;
 
   &:hover {
@@ -74,12 +67,12 @@ input[type="search"] {
 
 input[type="checkbox"], input[type="radio"] {
   display: inline;
-  margin-right: $base-line-height / 4;
+  margin-right: $unit / 4;
 }
 
 select {
   width: auto;
-  margin-bottom: $base-line-height;
+  margin-bottom: $unit;
 }
 
 // button,
@@ -88,8 +81,7 @@ input[type="submit"],
 input[type="reset"] {
   @include appearance(none);
   @include button;
-  font-size: $base-font-size;
-  font-weight: $base-font-weight;
+  font-weight: 400;
   cursor: pointer;
   user-select: none;
   vertical-align: middle;

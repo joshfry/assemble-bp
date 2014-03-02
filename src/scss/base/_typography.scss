@@ -2,45 +2,31 @@
 // Typography
 // -------------------------------------------------------------------
 
-// This is used for margin above headings
-$vertical-offset: 1.5875;
-
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
+  @include proxima_nova_regular;
   font-size: em(24);
   line-height: 1.25;
-  font-weight: 300;
   margin: {
-    top: $base-margin-px * $vertical-offset;
-    top: $base-margin-rem * $vertical-offset;
+    top: $base-margin-px*1.5875;
+    top: $base-margin-rem*1.5875;
     bottom: $base-margin-px;
     bottom: $base-margin-rem;
   }
   color: $header-font-color;
-  text-rendering: optimizeLegibility;
-}
-
-h1, .h1 {
-  font-size: $base-font-size * 3;
-}
-h2, .h2 {
-  font-size: $base-font-size * 2;
-  line-height: 1.125;
-}
-h3, .h3 {
-  font-size: $base-font-size * 1.5;
-  line-height: 1.125;
 }
 h4, .h4 {
+  font-size: em(18);
   margin-bottom: .5em;
-  font-size: $base-font-size;
-  font-weight: 600;
+  font-weight: bold;
 }
 h5, .h5 {
-  @extend h4;
+  margin: 1.5em 0 .25em;
+  font-size: $base-font-size;
+  font-weight: bold;
 }
 h6, .h6 {
-  @extend h4;
+  @extend h5;
 }
 
 p {
@@ -57,10 +43,11 @@ p {
 }
 
 .page-title {
-  @include margin;
+  margin: 0 0 $base-margin-px/2;
+  margin: 0 0 $base-margin-rem/2;
   font-size: 2.5em;
   line-height: 1;
-  font-weight: 100;
+  font-weight: 300;
 
   @include media(45em) {
     font-size: 3.5em;
@@ -68,98 +55,39 @@ p {
 }
 
 .intro {
-  // font-family: $serif;
   font-size: em(20);
   line-height: 1.5;
-  font-weight: 300;
   color: $dark-gray;
 }
 
-// Basic elements
+
+// TESTING
+//////////////////////////////////////////////////////////////////////
+
+
+// Responsivve type
 // -------------------------------------------------------------------
 
-hr {
-  border-bottom: 1px solid $base-border-color;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  margin: {
-    top: $base-margin-px * $vertical-offset;
-    top: $base-margin-rem * $vertical-offset;
-    bottom: $base-margin-px * $vertical-offset;
-    bottom: $base-margin-rem * $vertical-offset;
-  }
-
-  // Use alt if element above has margin-bottom
-  &.alt {
-    margin: {
-      bottom: ($base-margin-px * $vertical-offset) + $base-margin-px;
-      bottom: ($base-margin-rem * $vertical-offset) + $base-margin-rem;
+@include media($mobile-only) {
+  // .desc {
+  //   font-size: em(12);
+  // }
+  .site-main {
+    p,
+    li,
+    dd,dt,
+    code, pre,
+    td, th {
+      font-size: em(14);
+    }
+    blockquote p {
+      font-size: em(24);
+    }
+    .intro {
+      font-size: em(18);
+      line-height: 1.3;
     }
   }
 }
 
-abbr, acronym {
-  border-bottom: 1px dotted $base-border-color;
-  cursor: help;
-}
-
-address {
-  display: block;
-  margin: 0 0 ($base-line-height / 2);
-}
-
-hgroup {
-  margin-bottom: $base-line-height / 2;
-}
-
-del {
-  color: lighten($base-font-color, 15);
-}
-
-blockquote {
-  margin: {
-    left: 0;
-    right: 0;
-  }
-  // Maybe keep this for mobile? But it looks goos as is
-  // margin: {
-  //   top: $base-margin-px * $vertical-offset;
-  //   top: $base-margin-rem * $vertical-offset;
-  //   bottom: $base-margin-px * $vertical-offset;
-  //   bottom: $base-margin-rem * $vertical-offset;
-  // }
-  margin: {
-    top: $base-margin-px * ($vertical-offset * 2);
-    top: $base-margin-rem * ($vertical-offset * 2);
-    bottom: $base-margin-px * ($vertical-offset * 2);
-    bottom: $base-margin-rem * ($vertical-offset * 2);
-  }
-  padding: $base-padding/1.25;
-  padding-right: 0;
-  color: $primary;
-  border-left: $base-border-width $base-border-style lighten($primary, 45);
-
-  p {
-    font-size: em(24);
-    line-height: 1.3;
-    margin-bottom: 0;
-  }
-
-  cite {
-    display: block;
-    margin-top: $base-margin-px/2;
-    margin-top: $base-margin-rem/2;
-  }
-}
-
-cite {
-  font-family: $serif;
-  font-size: 90%;
-  font-style: italic;
-  color: $dark-gray;
-
-  &:before {
-    content: '\2014 \00A0';
-  }
-}
+//////////////////////////////////////////////////////////////////////

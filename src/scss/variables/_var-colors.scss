@@ -1,0 +1,44 @@
+// -------------------------------------------------------------------
+// Color Variables
+// -------------------------------------------------------------------
+
+$brand-red: #EC2B2F;
+$brand-orange: #EF6A30;
+$brand-blue: #00A7E1;
+$brand-yellow: #F8BF32;
+
+$primary: $brand-blue;
+$secondary: #001275;
+$tertiary: $brand-orange;
+
+$black: #000;
+$light-black: #393939;
+$light-gray: #ddd;
+$gray: #ccc;
+$dark-gray: #999;
+$white-smoke: #eee;
+$light-smoke: #f5f5f5;
+$white: #fff;
+
+$red: #e74c3c;
+$green: #2ecc71;
+$yellow: #f1c40f;
+
+// Font colors
+// ===========
+
+$base-font-color: $light-black;
+$header-font-color: #333;
+
+// Links
+// =====
+
+$link-color: $primary;
+$link-hover-color: darken($primary, 10%);
+
+// Social networks
+// ===============
+
+$color-facebook: #3b5998;
+$color-twitter: #00acee;
+$color-pinterest: #c8232c;

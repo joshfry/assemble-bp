@@ -1,0 +1,31 @@
+// -------------------------------------------------------------------
+// Links
+// -------------------------------------------------------------------
+
+a {
+  @include button-reset;
+  color: $link-color;
+  text-decoration: none;
+  outline: 0;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+  &:active, &:focus {
+    color: $link-hover-color;
+    outline: none;
+  }
+}
+
+// PDF links
+// =========
+
+// a[href$='.pdf'] {
+//   &:before {
+//     font-family: ;
+//     content: "";
+//     position: relative;
+//     padding-right: $unit/2;
+//     color: ;
+//   }
+// }

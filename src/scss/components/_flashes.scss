@@ -2,6 +2,12 @@
 // Flashes
 // -------------------------------------------------------------------
 
+$error-color: lighten($red,25%);
+$notice-color: lighten($yellow,25%);
+$success-color: lighten($green,25%);
+
+// -------------------------------------------------------------------
+
 /* Success, error & notice boxes for messages and errors. */
 %flash {
   @include rounded-corners;

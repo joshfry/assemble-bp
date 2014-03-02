@@ -2,118 +2,15 @@
 // Variables
 // -------------------------------------------------------------------
 
-// Dev Options
-// -------------------------------------------------------------------
-
 $show_media_queries : true;
 $show_baseline_grid : false;
 
-// Breakpoints
-// -------------------------------------------------------------------
+$base_font_size: 1em;
+$base_line_height: 1.5;
 
-$sitenav-breakpoint: 45em;
-$sitenav-mobile_only: max-width $sitenav-breakpoint - 0.0625em;
+$unit: $base_font_size;
+$gutter_spacing: flex-gutter($parent-columns);
 
-// @include media($sitenav-breakpoint) {}
-// @include media($sitenav-mobile_only) {}
-
-// Grid helpers
-// -------------------------------------------------------------------
-
-$gutter-spacing: flex-gutter($parent-columns);
-
-// Colors
-// -------------------------------------------------------------------
-
-$primary: #2379cf;
-$secondary: #001275;
-$tertiary: #e25a00;
-
-$primary-light: lighten($primary,25%);
-$primary-light-accent: lighten($primary,30%);
-$primary-lighter: lighten($primary,45%);
-$primary-lighter-accent: lighten($primary,35%);
-$primary-dark: darken($primary,15%);
-$primary-darker: darken($primary,30%);
-
-$tertiary-dark: darken($tertiary,15%);
-$tertiary-darker: darken($tertiary,30%);
-
-$black: #000;
-$light-black: #444;
-$light-gray: #ddd;
-$gray: #ccc;
-$dark-gray: #999;
-$white-smoke: #eee;
-$light-smoke: #f5f5f5;
-$white: #fff;
-
-$red: #e74c3c;
-$green: #2ecc71;
-$yellow: #f1c40f;
-
-// Body Background Color
-$base-background-color: $white;
-
-// Selection Color
-$selection-color: #FF69B4;
-
-// Syntax highlighting
-$syntax-bg-color: #071022;
-
-// Typography
-// -------------------------------------------------------------------
-
-$base-font-size: 1em;
-$base-line-height: $base-font-size * 1.6;
-$base-font-weight: 400;
-
-$sans-serif: "Open Sans", sans-serif;
-$serif: $georgia;
-
-$base-font-family: $sans-serif;
-$header-font-family: $base-font-family; // currently not in use
-
-// Sidebar
-$base-sidebar-font-size: 1em * .875;
-$base-sidebar-line-height: $base-font-size * 1.6;
-
-// Font Colors
-$base-font-color: $light-black;
-$base-accent-color: $primary;
-$header-font-color: #333;
-
-// Text Link Colors
-$base-link-color: $base-accent-color;
-$hover-link-color: $tertiary;
-
-// Borders
-$base-border-width: em(10);
-$base-border-style: solid;
-$base-border-color: $light-gray;
-// All base border vars in one
-$base-border: $base-border-width $base-border-style $base-border-color;
-
-// Flash Colors
-$error-color: lighten($red,25%);
-$notice-color: lighten($yellow,25%);
-$success-color: lighten($green,25%);
-
-// Sizes
-// -------------------------------------------------------------------
-
-$unit: $base-font-size;
-
-$base-margin-px: 20px; // was 16px
-$base-margin-rem: 1.25rem; // was 1rem
-
-$base-padding: em(24);
-
-$base-border-radius: em(4);
-
-$container: $max-width;
-
-// Alt container sizes
-$container-narrow          : 60em; // 960px
-$container-super-narrow    : 45em; // 720px
-$container-mobile          : 30em; // 480px
+@import "var-colors";
+@import "var-breakpoints";
+@import "var-borders";

@@ -9,20 +9,22 @@
 @import "variables/grid-settings";
 @import "../../dist/assets/bower/neat/app/assets/stylesheets/neat";
 
+// Typekit
+@import "typekit";
+
 // Variables
 @import "variables/variables";
 
 // Mixins
-@import "mixins/container";
-@import "mixins/full-bleed";
-@import "mixins/hide-text";
-@import "mixins/lists";
 @import "mixins/margin";
+@import "mixins/padding";
+@import "mixins/containers";
 @import "mixins/module";
+@import "mixins/hide-text";
 @import "mixins/omega-reset";
-@import "mixins/padded";
-@import "mixins/rounded-corners";
+@import "mixins/list-of-links";
 @import "mixins/trailing-hovers";
+@import "mixins/rounded-corners";
 @import "mixins/buttons";
 @import "mixins/triangle";
 
@@ -34,17 +36,18 @@
 @import "base/normalize";
 @import "base/base";
 @import "base/typography";
+@import "base/links";
+@import "base/elements";
 @import "base/lists";
-@import "base/img";
 @import "base/code";
-@import "base/tables";
 @import "base/forms";
+@import "base/tables";
 
 // Components
-@import "components/grid-skeleton";
+// @import "components/grid-skeleton"; // uncomment you you want to use grid class names in html
+@import "components/animations";
 @import "components/image-grid";
-@import "components/hero-images";
-@import "components/responsive-tables";
+@import "components/img-flex";
 @import "components/flashes";
 
 // Site

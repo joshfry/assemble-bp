@@ -1,0 +1,72 @@
+// -------------------------------------------------------------------
+// Padding
+// -------------------------------------------------------------------
+
+$base-padding: em(24);
+
+// -------------------------------------------------------------------
+// Typography-based padding
+//
+// Use these mixins for consistent vertical rhythm
+// -------------------------------------------------------------------
+
+@mixin padding {
+  padding: {
+    bottom: $base-margin-px;
+    bottom: $base-margin-rem;
+  }
+}
+
+@mixin padding-top {
+  padding: {
+    top: $base-margin-px;
+    top: $base-margin-rem;
+  }
+}
+
+
+// -------------------------------------------------------------------
+// Section-based padding
+//
+// Use these mixins for section spacing
+// -------------------------------------------------------------------
+
+@mixin padded-top-light    { padding-top: $base-padding; }
+@mixin padded-bottom-light { padding-bottom: $base-padding; }
+@mixin padded-top          { padding-top: $base-padding*2; }
+@mixin padded-bottom       { padding-bottom: $base-padding*2; }
+
+@mixin padded-light {
+  @include padded-top-light;
+  @include padded-bottom-light;
+}
+
+@mixin padded {
+  @include padded-light;
+  @include media(30em) {
+    @include padded-top;
+    @include padded-bottom;
+  }
+}
+
+
+// -------------------------------------------------------------------
+// Mixin classes
+//
+// For use within HTML
+// -------------------------------------------------------------------
+
+// Typography-based padding
+
+.padding             { @include padding; }
+.padding-top         { @include padding-top; }
+
+// Section-based padding
+
+.padded-top-light    { @include padded-top-light; }
+.padded-bottom-light { @include padded-bottom-light; }
+.padded-top          { @include padded-top; }
+.padded-bottom       { @include padded-bottom; }
+
+.padded              { @include padded; }
+.padded-light        { @include padded-light; }
